@@ -309,7 +309,7 @@ export default function Index() {
               </div>
               <div className="flex flex-col sm:flex-row gap-6">
                 <Button size="lg" className="btn-luxury text-xl px-12 py-6 animate-luxury-float">
-                  <Yacht className="mr-3 h-6 w-6" />
+                  <Ship className="mr-3 h-6 w-6" />
                   Exclusive Access
                 </Button>
                 <Button
