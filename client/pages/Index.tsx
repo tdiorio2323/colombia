@@ -120,9 +120,9 @@ export default function Index() {
             </div>
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-gold/20 to-primary/20 p-8">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Eimy Contreras" 
+                <img
+                  src="https://images.pexels.com/photos/5648355/pexels-photo-5648355.jpeg"
+                  alt="Eimy Contreras"
                   className="w-full h-full object-cover rounded-xl"
                 />
               </div>
