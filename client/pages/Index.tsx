@@ -653,7 +653,7 @@ export default function Index() {
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
-                    <Yacht className="h-6 w-6 text-gold" />
+                    <Ship className="h-6 w-6 text-gold" />
                     <span className="text-lg text-white/90 font-luxury-sans">
                       Private yacht access worldwide
                     </span>
