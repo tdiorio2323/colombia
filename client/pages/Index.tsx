@@ -23,8 +23,8 @@ import {
   Diamond,
   Gift,
   Anchor,
-  Yacht,
-  Gem,
+  Ship,
+  Zap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
