@@ -263,7 +263,7 @@ export default function Index() {
               </Link>
             </div>
             <Button className="btn-luxury px-8 py-4 text-lg font-luxury-sans tracking-wider">
-              <Gem className="mr-3 h-5 w-5" />
+              <Zap className="mr-3 h-5 w-5" />
               Join Elite
             </Button>
           </div>
