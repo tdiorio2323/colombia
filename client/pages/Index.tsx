@@ -395,7 +395,7 @@ export default function Index() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Yacht className="h-8 w-8 text-blue animate-luxury-pulse" />
+              <Ship className="h-8 w-8 text-blue animate-luxury-pulse" />
               <div>
                 <div className="text-3xl font-luxury-display font-bold text-blue">VIP</div>
                 <div className="text-lg text-white/90 font-luxury-sans">Yacht Club</div>
