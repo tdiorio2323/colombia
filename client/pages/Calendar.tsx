@@ -118,7 +118,7 @@ export default function Calendar() {
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fda4e11f2faca4ebeb913499776df66ee?format=webp&width=800)',
-            backgroundPosition: '50% 0%'
+            backgroundPosition: '50% -8%'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-background/95" />
