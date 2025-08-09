@@ -114,10 +114,11 @@ export default function Calendar() {
       {/* Hero Section with Background */}
       <section className="relative py-16 lg:py-20 overflow-hidden">
         {/* Background Image from Homepage */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+        <div
+          className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fda4e11f2faca4ebeb913499776df66ee?format=webp&width=800)'
+            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fda4e11f2faca4ebeb913499776df66ee?format=webp&width=800)',
+            backgroundPosition: '50% 0%'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-background/95" />
