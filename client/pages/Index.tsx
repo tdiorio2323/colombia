@@ -150,7 +150,7 @@ export default function Index() {
             <div className="relative">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden sexy-glow group">
                 <img
-                  src="https://scontent-dfw5-3.cdninstagram.com/v/t51.2885-15/505423323_17960916839942241_6713329805724735223_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjE0NDB4MTgzMC5zZHIuZjc1NzYxLmRlZmF1bHRfaW1hZ2UuYzIifQ&_nc_ht=scontent-dfw5-3.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2QElNvRi5Yoz4Qj3pDiPU34s5eNCvm0ivAlX2pmZwjmV9KaC2EZo33kwWF14OES1Gws&_nc_ohc=5jUBg1XkBn8Q7kNvwHmWwsN&_nc_gid=6ZCL_CQX2C0KPhoLqxiQag&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzY1MjkxNDg4MjY4NjUwMTM4Ng%3D%3D.3-ccb7-5&oh=00_AfX6soFJ2BEhTI9Akp8tF9rJG0EHBjXKnR8i3upWA8fksQ&oe=689CDF10&_nc_sid=7a9f4b"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F88cadbc94e5b4c93a8abd3e9003eeabe?format=webp&width=800"
                   alt="Eimy Contreras - Colombian Supermodel"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
