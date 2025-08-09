@@ -1,87 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   /**
-   * Eimy Contreras Official Brand Colors
-   * Primary: #000000 (Black)
-   * Accent: #D4AF37 (Gold)
-   * Background: #F5F5F5 (Soft Cream)
+   * Colombian Flag Colors Theme - Sexy & Sultry
+   * Red: #CE1126 (Primary - Passion)
+   * Yellow: #FFCD00 (Gold - Luxury) 
+   * Blue: #003893 (Deep Blue - Elegance)
    */
   :root {
-    --background: 0 0% 96.1%; /* #F5F5F5 Soft Cream */
-    --foreground: 0 0% 0%; /* #000000 Black */
+    --background: 20 10% 4%; /* Dark sultry background */
+    --foreground: 0 0% 98%; /* Light text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 0 0% 0%; /* #000000 Black */
-    --primary-foreground: 0 0% 100%;
+    --primary: 348 87% 47%; /* #CE1126 Colombian Red */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96.1%; /* #F5F5F5 Soft Cream */
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 20 15% 12%; 
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 92%; 
-    --muted-foreground: 0 0% 25%;
-
-    --accent: 45 100% 51%; /* #D4AF37 Gold */
-    --accent-foreground: 0 0% 0%;
-
-    --gold: 45 100% 51%; /* #D4AF37 Gold */
-    --gold-foreground: 0 0% 0%;
-
-    --cream: 0 0% 96.1%; /* #F5F5F5 Soft Cream */
-    --cream-foreground: 0 0% 0%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 85%;
-    --input: 0 0% 90%;
-    --ring: 45 100% 51%; /* Gold ring color */
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 0 0% 7%; 
-    --foreground: 0 0% 96.1%;
-
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 96.1%;
-
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 96.1%;
-
-    --primary: 0 0% 96.1%;
-    --primary-foreground: 0 0% 7%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 96.1%;
-
-    --muted: 0 0% 15%;
+    --muted: 20 10% 15%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 45 100% 51%; /* Keep gold accent in dark mode */
-    --accent-foreground: 0 0% 7%;
+    --accent: 348 87% 47%; /* Colombian Red accent */
+    --accent-foreground: 0 0% 98%;
 
-    --gold: 45 100% 51%;
-    --gold-foreground: 0 0% 7%;
+    --gold: 48 100% 50%; /* #FFCD00 Colombian Yellow */
+    --gold-foreground: 0 0% 10%;
 
-    --cream: 0 0% 15%;
-    --cream-foreground: 0 0% 96.1%;
+    --blue: 216 100% 29%; /* #003893 Colombian Blue */
+    --blue-foreground: 0 0% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 96.1%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 45 100% 51%;
+    --border: 20 15% 20%;
+    --input: 20 15% 15%;
+    --ring: 348 87% 47%; /* Red ring */
+
+    --radius: 0.75rem;
+  }
+
+  .light {
+    --background: 48 100% 97%; /* Light Colombian yellow background */
+    --foreground: 20 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 20% 10%;
+
+    --primary: 348 87% 47%; /* Keep red primary */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 48 80% 92%;
+    --secondary-foreground: 20 20% 10%;
+
+    --muted: 48 50% 90%;
+    --muted-foreground: 20 15% 40%;
+
+    --accent: 348 87% 47%;
+    --accent-foreground: 0 0% 98%;
+
+    --gold: 48 100% 50%;
+    --gold-foreground: 0 0% 10%;
+
+    --blue: 216 100% 29%;
+    --blue-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 48 50% 85%;
+    --input: 48 50% 90%;
+    --ring: 348 87% 47%;
   }
 }
 
@@ -92,23 +92,58 @@
 
   body {
     @apply bg-background text-foreground font-body;
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(20 15% 6%) 100%);
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }
+
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
 }
 
 @layer utilities {
   .text-gradient {
+    @apply bg-gradient-to-r from-primary via-gold to-blue bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-red {
     @apply bg-gradient-to-r from-primary to-gold bg-clip-text text-transparent;
   }
   
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
   
   .btn-gold {
-    @apply bg-gold text-gold-foreground hover:bg-gold/90 transition-colors duration-200;
+    @apply bg-gold text-gold-foreground hover:bg-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-sexy {
+    @apply bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:from-primary/90 hover:to-primary/70 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
+  }
+
+  .sexy-glow {
+    box-shadow: 0 0 20px rgba(206, 17, 38, 0.3);
+  }
+
+  .sexy-border {
+    border: 1px solid rgba(206, 17, 38, 0.3);
+    box-shadow: 0 0 10px rgba(206, 17, 38, 0.1);
+  }
+
+  .colombia-gradient {
+    background: linear-gradient(135deg, #FFCD00 0%, #CE1126 50%, #003893 100%);
+  }
+
+  .sexy-card {
+    @apply backdrop-blur-sm bg-card/80 border-primary/20;
+    box-shadow: 0 8px 32px rgba(206, 17, 38, 0.1);
   }
 }
