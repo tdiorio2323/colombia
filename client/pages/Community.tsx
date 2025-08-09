@@ -1,7 +1,14 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Crown, Users, MessageCircle, Heart, Star, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Crown,
+  Users,
+  MessageCircle,
+  Heart,
+  Star,
+  TrendingUp,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Community() {
   return (
@@ -12,7 +19,8 @@ export default function Community() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1654828/pexels-photo-1654828.jpeg)'
+            backgroundImage:
+              "url(https://images.pexels.com/photos/1654828/pexels-photo-1654828.jpeg)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
@@ -25,15 +33,39 @@ export default function Community() {
                 <Crown className="h-7 w-7 text-white drop-shadow-lg" />
               </div>
               <div>
-                <span className="text-3xl font-script font-bold text-white drop-shadow-lg">Eimy Contreras</span>
-                <div className="text-sm text-gold/90 font-serif italic">🏝️ Colombian Paradise</div>
+                <span className="text-3xl font-script font-bold text-white drop-shadow-lg">
+                  Eimy Contreras
+                </span>
+                <div className="text-sm text-gold/90 font-serif italic">
+                  🏝️ Colombian Paradise
+                </div>
               </div>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/services" className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow">Experiences</Link>
-              <Link to="/shop" className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow">Luxury Shop</Link>
-              <Link to="/community" className="text-gold transition-colors font-medium text-lg drop-shadow">VIP Club</Link>
-              <Link to="/calendar" className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow">Book Me</Link>
+              <Link
+                to="/services"
+                className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow"
+              >
+                Experiences
+              </Link>
+              <Link
+                to="/shop"
+                className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow"
+              >
+                Luxury Shop
+              </Link>
+              <Link
+                to="/community"
+                className="text-gold transition-colors font-medium text-lg drop-shadow"
+              >
+                VIP Club
+              </Link>
+              <Link
+                to="/calendar"
+                className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow"
+              >
+                Book Me
+              </Link>
             </div>
             <Button className="bg-gradient-to-r from-gold to-primary text-white hover:from-gold/90 hover:to-primary/90 px-6 py-3 text-lg font-bold shadow-xl">
               🌊 Join Paradise
@@ -51,31 +83,44 @@ export default function Community() {
           <div className="bg-gold/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8">
             <Users className="h-12 w-12 text-gold" />
           </div>
-          
+
           <h1 className="text-5xl font-display font-bold mb-6">
             Community Page <span className="text-gradient">Coming Soon</span>
           </h1>
-          
+
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            We're building an amazing community space with fan interactions, exclusive content, 
-            leaderboards, and more. Stay tuned for the official launch!
+            We're building an amazing community space with fan interactions,
+            exclusive content, leaderboards, and more. Stay tuned for the
+            official launch!
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Card className="p-6 text-center">
               <MessageCircle className="h-8 w-8 text-gold mx-auto mb-4" />
-              <h3 className="font-display font-semibold text-lg mb-2">Fan Feed</h3>
-              <p className="text-muted-foreground text-sm">Share moments and connect with other fans</p>
+              <h3 className="font-display font-semibold text-lg mb-2">
+                Fan Feed
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                Share moments and connect with other fans
+              </p>
             </Card>
             <Card className="p-6 text-center">
               <TrendingUp className="h-8 w-8 text-gold mx-auto mb-4" />
-              <h3 className="font-display font-semibold text-lg mb-2">Leaderboards</h3>
-              <p className="text-muted-foreground text-sm">Compete for top fan status</p>
+              <h3 className="font-display font-semibold text-lg mb-2">
+                Leaderboards
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                Compete for top fan status
+              </p>
             </Card>
             <Card className="p-6 text-center">
               <Star className="h-8 w-8 text-gold mx-auto mb-4" />
-              <h3 className="font-display font-semibold text-lg mb-2">Exclusive Content</h3>
-              <p className="text-muted-foreground text-sm">Access community-only posts</p>
+              <h3 className="font-display font-semibold text-lg mb-2">
+                Exclusive Content
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                Access community-only posts
+              </p>
             </Card>
           </div>
 
