@@ -77,7 +77,7 @@ export default function Index() {
       price: "$2,999",
       duration: "4 hours",
       description: "Exclusive yacht experience in Colombian waters",
-      icon: Yacht,
+      icon: Ship,
       sexy: true,
     },
     {
