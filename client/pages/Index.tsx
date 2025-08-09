@@ -404,8 +404,16 @@ export default function Index() {
       </section>
 
       {/* Press & Features */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 overflow-hidden">
+        {/* Tropical Sunset Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/8267269/pexels-photo-8267269.jpeg)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-display font-bold mb-6 text-gradient-red">
               In the <span className="font-script">Spotlight</span>
