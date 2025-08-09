@@ -6,23 +6,43 @@ import { Link } from 'react-router-dom';
 export default function Community() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-        <div className="container mx-auto px-4 py-4">
+      {/* Luxury Beach Navigation */}
+      <nav className="sticky top-0 z-50 relative overflow-hidden">
+        {/* Luxury Beach Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/1654828/pexels-photo-1654828.jpeg)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+
+        <div className="container mx-auto px-4 py-6 relative z-10">
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-2">
-              <Crown className="h-8 w-8 text-gold" />
-              <span className="text-2xl font-display font-bold">Eimy Contreras</span>
+            <Link to="/" className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-gold via-gold/80 to-primary rounded-full flex items-center justify-center shadow-lg">
+                <Crown className="h-7 w-7 text-white drop-shadow-lg" />
+              </div>
+              <div>
+                <span className="text-3xl font-script font-bold text-white drop-shadow-lg">Eimy Contreras</span>
+                <div className="text-sm text-gold/90 font-serif italic">🏝️ Colombian Paradise</div>
+              </div>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/services" className="hover:text-gold transition-colors">Services</Link>
-              <Link to="/shop" className="hover:text-gold transition-colors">Shop</Link>
-              <Link to="/community" className="text-gold transition-colors">Community</Link>
-              <Link to="/calendar" className="hover:text-gold transition-colors">Calendar</Link>
+              <Link to="/services" className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow">Experiences</Link>
+              <Link to="/shop" className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow">Luxury Shop</Link>
+              <Link to="/community" className="text-gold transition-colors font-medium text-lg drop-shadow">VIP Club</Link>
+              <Link to="/calendar" className="text-white/90 hover:text-gold transition-colors font-medium text-lg drop-shadow">Book Me</Link>
             </div>
-            <Button className="btn-gold">Join VIP</Button>
+            <Button className="bg-gradient-to-r from-gold to-primary text-white hover:from-gold/90 hover:to-primary/90 px-6 py-3 text-lg font-bold shadow-xl">
+              🌊 Join Paradise
+            </Button>
           </div>
         </div>
+
+        {/* Luxury Border */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-primary to-gold" />
       </nav>
 
       {/* Placeholder Content */}
