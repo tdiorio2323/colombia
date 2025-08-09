@@ -38,10 +38,10 @@ export default function Index() {
   }, []);
 
   const exclusiveContent = [
-    { type: 'image', thumbnail: 'https://images.pexels.com/photos/27852083/pexels-photo-27852083.jpeg', title: 'Behind the Glamour', premium: true },
-    { type: 'video', thumbnail: 'https://images.pexels.com/photos/33308045/pexels-photo-33308045.jpeg', title: 'Exclusive Photoshoot', premium: true },
-    { type: 'image', thumbnail: 'https://images.pexels.com/photos/14668263/pexels-photo-14668263.jpeg', title: 'Red Carpet Moments', premium: false },
-    { type: 'video', thumbnail: 'https://images.pexels.com/photos/20159588/pexels-photo-20159588.jpeg', title: 'VIP Experience', premium: true },
+    { type: 'image', thumbnail: 'https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F34a6528c4b6242999f4f5c4895aaa226?format=webp&width=800', title: 'Behind the Glamour', premium: true },
+    { type: 'video', thumbnail: 'https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fda4e11f2faca4ebeb913499776df66ee?format=webp&width=800', title: 'Exclusive Photoshoot', premium: true },
+    { type: 'image', thumbnail: 'https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F11628a736051448e9412cd3585b35f54?format=webp&width=800', title: 'Red Carpet Moments', premium: false },
+    { type: 'video', thumbnail: 'https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F58b58f5da4764a0d9ca005c06790cc73?format=webp&width=800', title: 'VIP Experience', premium: true },
   ];
 
   const vipExperiences = [
@@ -52,10 +52,10 @@ export default function Index() {
   ];
 
   const luxuryMerchandise = [
-    { name: 'Signed Lingerie Collection', price: '$299.99', image: 'https://images.pexels.com/photos/14668263/pexels-photo-14668263.jpeg', exclusive: true, limited: 'Only 50 left' },
-    { name: 'Colombian Queen Crown', price: '$149.99', image: 'https://images.pexels.com/photos/20159588/pexels-photo-20159588.jpeg', exclusive: false, limited: 'Limited Edition' },
-    { name: 'VIP Meet & Greet', price: '$599.99', image: 'https://images.pexels.com/photos/27852083/pexels-photo-27852083.jpeg', exclusive: true, limited: 'Very Limited' },
-    { name: 'Personalized Photoshoot', price: '$1299.99', image: 'https://images.pexels.com/photos/33308045/pexels-photo-33308045.jpeg', exclusive: true, limited: 'Exclusive' },
+    { name: 'Signed Lingerie Collection', price: '$299.99', image: 'https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F19a2975b0cb34bb1b0c56692a2114d23?format=webp&width=800', exclusive: true, limited: 'Only 50 left' },
+    { name: 'Colombian Queen Crown', price: '$149.99', image: 'https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fe8e0f03934b8449f839fd5070dc38019?format=webp&width=800', exclusive: false, limited: 'Limited Edition' },
+    { name: 'VIP Meet & Greet', price: '$599.99', image: 'https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Ffe295b2b0d4446bb976e830c062e028a?format=webp&width=800', exclusive: true, limited: 'Very Limited' },
+    { name: 'Personalized Photoshoot', price: '$1299.99', image: 'https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fbaa8774a50ef483d90afeee8f1859fbf?format=webp&width=800', exclusive: true, limited: 'Exclusive' },
   ];
 
   const topFans = [
