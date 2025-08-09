@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         'display': ['Playfair Display', 'serif'],
         'body': ['Inter', 'sans-serif'],
+        'script': ['Dancing Script', 'cursive'],
+        'serif': ['Cormorant Garamond', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -39,9 +41,9 @@ export default {
           DEFAULT: "hsl(var(--gold))",
           foreground: "hsl(var(--gold-foreground))",
         },
-        cream: {
-          DEFAULT: "hsl(var(--cream))",
-          foreground: "hsl(var(--cream-foreground))",
+        blue: {
+          DEFAULT: "hsl(var(--blue))",
+          foreground: "hsl(var(--blue-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -64,6 +66,11 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'colombia-flag': 'linear-gradient(135deg, #FFCD00 0%, #CE1126 50%, #003893 100%)',
+        'sexy-red': 'linear-gradient(135deg, #CE1126 0%, #8B0000 100%)',
+        'golden-glow': 'linear-gradient(135deg, #FFCD00 0%, #FF8C00 100%)',
       },
       keyframes: {
         "accordion-down": {
@@ -100,12 +107,32 @@ export default {
             transform: "translateX(0)",
           },
         },
+        "glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px rgba(206, 17, 38, 0.3)",
+          },
+          "50%": {
+            boxShadow: "0 0 30px rgba(206, 17, 38, 0.6)",
+          },
+        },
+        "pulse-sexy": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.8",
+            transform: "scale(1.05)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in": "slide-in 0.4s ease-out",
+        "glow": "glow 2s ease-in-out infinite",
+        "pulse-sexy": "pulse-sexy 3s ease-in-out infinite",
       },
     },
   },
