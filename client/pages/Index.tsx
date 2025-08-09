@@ -22,6 +22,9 @@ import {
   Flame,
   Diamond,
   Gift,
+  Anchor,
+  Yacht,
+  Gem,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -70,71 +73,71 @@ export default function Index() {
 
   const vipExperiences = [
     {
-      name: "Private Video Call",
-      price: "$499",
-      duration: "30 min",
-      description: "One-on-one intimate conversation",
-      icon: Heart,
+      name: "Private Yacht Experience",
+      price: "$2,999",
+      duration: "4 hours",
+      description: "Exclusive yacht experience in Colombian waters",
+      icon: Yacht,
       sexy: true,
     },
     {
-      name: "Exclusive Content Access",
-      price: "$199",
-      duration: "Monthly",
-      description: "Uncensored behind-the-scenes content",
+      name: "Penthouse Encounter",
+      price: "$1,999",
+      duration: "2 hours",
+      description: "Luxury penthouse with skyline views",
+      icon: Diamond,
+      sexy: true,
+    },
+    {
+      name: "Marina Photoshoot",
+      price: "$1,299",
+      duration: "90 min",
+      description: "Professional shoot at luxury marina",
       icon: Camera,
-      sexy: true,
-    },
-    {
-      name: "Personal Message",
-      price: "$99",
-      duration: "Custom",
-      description: "Personalized audio message just for you",
-      icon: Mail,
       sexy: false,
     },
     {
-      name: "Virtual Date Experience",
-      price: "$799",
-      duration: "60 min",
-      description: "Ultimate premium experience",
-      icon: Diamond,
+      name: "Colombian Goddess Experience",
+      price: "$4,999",
+      duration: "Full day",
+      description: "Ultimate luxury Colombian adventure",
+      icon: Crown,
       sexy: true,
     },
   ];
 
   const luxuryMerchandise = [
     {
-      name: "Signed Lingerie Collection",
-      price: "$299.99",
+      name: "Diamond Collection",
+      price: "$2,999.99",
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F19a2975b0cb34bb1b0c56692a2114d23?format=webp&width=800",
       exclusive: true,
-      limited: "Only 50 left",
+      limited: "Only 10 left",
     },
     {
-      name: "Colombian Queen Crown",
-      price: "$149.99",
+      name: "Colombian Emerald Crown",
+      price: "$1,499.99",
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fe8e0f03934b8449f839fd5070dc38019?format=webp&width=800",
       exclusive: false,
       limited: "Limited Edition",
     },
     {
-      name: "VIP Meet & Greet",
-      price: "$599.99",
+      name: "Yacht Club Membership",
+      price: "$9,999.99",
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Ffe295b2b0d4446bb976e830c062e028a?format=webp&width=800",
       exclusive: true,
-      limited: "Very Limited",
+      limited: "Very Exclusive",
     },
     {
-      name: "Personalized Photoshoot",
-      price: "$1299.99",
+      name: "Private Island Getaway",
+      price: "$19,999.99",
       image:
         "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fbaa8774a50ef483d90afeee8f1859fbf?format=webp&width=800",
       exclusive: true,
-      limited: "Exclusive",
+      limited: "Ultimate",
     },
   ];
 
@@ -142,56 +145,61 @@ export default function Index() {
     {
       rank: 1,
       name: "Carlos M.",
-      spent: "$5,247",
+      spent: "$45,247",
       badge: "diamond",
       country: "🇨🇴",
+      title: "Yacht Club Member",
     },
     {
       rank: 2,
       name: "Sofia R.",
-      spent: "$3,156",
+      spent: "$31,156",
       badge: "platinum",
       country: "🇺🇸",
+      title: "VIP Elite",
     },
     {
       rank: 3,
       name: "Diego L.",
-      spent: "$2,923",
+      spent: "$22,923",
       badge: "gold",
       country: "🇲🇽",
+      title: "Premium Lover",
     },
     {
       rank: 4,
       name: "Isabella D.",
-      spent: "$2,445",
+      spent: "$18,445",
       badge: "silver",
       country: "🇨🇴",
+      title: "Colombian Elite",
     },
     {
       rank: 5,
       name: "Miguel K.",
-      spent: "$1,932",
+      spent: "$15,932",
       badge: "bronze",
       country: "🇪🇸",
+      title: "Luxury Fan",
     },
   ];
 
   const pressFeatures = [
     {
-      outlet: "Vogue Colombia",
-      headline: '"The Most Sensual Model of Our Generation"',
+      outlet: "Forbes Colombia",
+      headline: '"The Most Luxurious Supermodel Experience in Latin America"',
       date: "2024",
       featured: true,
     },
     {
-      outlet: "Elle Magazine",
-      headline: "Eimy Contreras: Redefining Latin Beauty",
+      outlet: "Robb Report",
+      headline: "Eimy Contreras: Redefining Ultra-Luxury Lifestyle",
       date: "2024",
       featured: true,
     },
     {
-      outlet: "Harper's Bazaar",
-      headline: "Colombian Goddess Takes the World",
+      outlet: "Vanity Fair",
+      headline: "Colombian Goddess: The Ultimate Luxury Brand",
       date: "2023",
       featured: false,
     },
@@ -199,145 +207,157 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
-      {/* Sexy Navigation */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-background/90 border-b border-primary/20 sexy-glow">
-        <div className="container mx-auto px-4 py-4">
+      {/* Luxury Marina Background */}
+      <div className="fixed inset-0 z-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url(https://images.pexels.com/photos/42092/pexels-photo-42092.jpeg)",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/95" />
+      </div>
+
+      {/* Luxury Navigation */}
+      <nav className="sticky top-0 z-50 glass-nav">
+        <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-gold rounded-full flex items-center justify-center">
-                <Crown className="h-6 w-6 text-white" />
+            <div className="flex items-center space-x-4">
+              <div className="w-14 h-14 bg-gradient-to-br from-gold via-primary to-blue rounded-2xl flex items-center justify-center shadow-luxury animate-luxury-pulse">
+                <Crown className="h-8 w-8 text-white drop-shadow-lg" />
               </div>
               <div>
-                <span className="text-2xl font-script font-bold text-gradient-red">
+                <span className="text-4xl font-luxury-display font-bold text-luxury-gold drop-shadow-lg">
                   Eimy Contreras
                 </span>
-                <div className="text-xs text-muted-foreground">
-                  Colombian Goddess
+                <div className="text-sm text-gold/90 font-luxury-script flex items-center space-x-2">
+                  <Anchor className="h-4 w-4" />
+                  <span>Colombian Luxury Goddess</span>
                 </div>
               </div>
             </div>
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-10">
               <Link
                 to="/services"
-                className="hover:text-primary transition-colors font-medium"
+                className="text-white/90 hover:text-gold transition-all duration-300 font-luxury-sans text-lg tracking-wide hover:scale-105"
               >
                 Experiences
               </Link>
               <Link
                 to="/shop"
-                className="hover:text-primary transition-colors font-medium"
+                className="text-white/90 hover:text-gold transition-all duration-300 font-luxury-sans text-lg tracking-wide hover:scale-105"
               >
                 Luxury Shop
               </Link>
               <Link
                 to="/community"
-                className="hover:text-primary transition-colors font-medium"
+                className="text-white/90 hover:text-gold transition-all duration-300 font-luxury-sans text-lg tracking-wide hover:scale-105"
               >
-                VIP Club
+                Elite Club
               </Link>
               <Link
                 to="/calendar"
-                className="hover:text-primary transition-colors font-medium"
+                className="text-white/90 hover:text-gold transition-all duration-300 font-luxury-sans text-lg tracking-wide hover:scale-105"
               >
-                Calendar
+                Book Me
               </Link>
             </div>
-            <Button className="btn-sexy font-semibold">
-              <Flame className="mr-2 h-4 w-4" />
-              Join VIP
+            <Button className="btn-luxury px-8 py-4 text-lg font-luxury-sans tracking-wider">
+              <Gem className="mr-3 h-5 w-5" />
+              Join Elite
             </Button>
           </div>
         </div>
       </nav>
 
-      {/* Sultry Hero Section */}
-      <section className="relative py-16 lg:py-24 overflow-hidden">
-        {/* Colombian Ocean Background */}
+      {/* Ultra-Luxury Hero Section */}
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        {/* Luxury Resort Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{
-            backgroundImage:
-              "url(https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg)",
+            backgroundImage: "url(https://images.pexels.com/photos/8085365/pexels-photo-8085365.jpeg)",
           }}
         />
-        <div className="absolute inset-0 colombia-gradient opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/90" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-3">
-                  <Badge className="bg-primary/20 text-primary border-primary/30 animate-pulse-sexy">
-                    🇨🇴 Colombian Supermodel
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background/90" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-10 animate-fade-in">
+              <div className="space-y-8">
+                <div className="flex items-center space-x-4">
+                  <Badge className="glass-card-luxury px-6 py-3 text-lg animate-luxury-pulse">
+                    <Sparkles className="w-5 h-5 mr-2" />
+                    🇨🇴 Ultra-Luxury Experience
                   </Badge>
-                  <Badge className="bg-gold/20 text-gold border-gold/30">
-                    <Sparkles className="w-3 h-3 mr-1" />
-                    Verified
+                  <Badge className="glass-card px-4 py-2 bg-gold/20 text-gold border-gold/30">
+                    <Crown className="w-4 h-4 mr-2" />
+                    Verified Elite
                   </Badge>
                 </div>
-                <h1 className="text-6xl lg:text-8xl font-display font-bold leading-tight">
-                  <span className="text-gradient font-script">Eimy</span>
+                <h1 className="text-7xl lg:text-9xl font-luxury-display font-bold leading-none text-luxury-shadow">
+                  <span className="text-gradient-luxury font-luxury-script text-8xl lg:text-10xl">
+                    Eimy
+                  </span>
                   <br />
-                  <span className="text-primary">Contreras</span>
+                  <span className="text-gold">Contreras</span>
                 </h1>
-                <p className="text-xl text-muted-foreground max-w-lg font-serif italic">
-                  "Experience the passion of Colombia through exclusive content,
-                  intimate moments, and luxury experiences that will ignite your
-                  desires."
+                <p className="text-2xl text-white/90 max-w-2xl font-luxury-script leading-relaxed">
+                  "Experience the pinnacle of Colombian luxury through exclusive waterfront encounters, 
+                  private yacht adventures, and unforgettable moments that money can't buy... until now."
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="btn-sexy text-lg px-8 py-4">
-                  <Play className="mr-2 h-5 w-5" />
-                  Watch Exclusive
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Button size="lg" className="btn-luxury text-xl px-12 py-6 animate-luxury-float">
+                  <Yacht className="mr-3 h-6 w-6" />
+                  Exclusive Access
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  className="glass-card-luxury text-xl px-12 py-6 text-gold hover:bg-gold/10 border-gold/30"
                 >
-                  <Instagram className="mr-2 h-5 w-5" />
-                  Follow Me
+                  <Instagram className="mr-3 h-6 w-6" />
+                  Follow Journey
                 </Button>
               </div>
-              <div className="flex items-center space-x-6 text-sm">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-muted-foreground">Live Now</span>
+              <div className="flex items-center space-x-8 text-lg">
+                <div className="flex items-center space-x-3">
+                  <div className="w-4 h-4 bg-gold rounded-full animate-luxury-pulse"></div>
+                  <span className="text-white/80 font-luxury-sans">Live from Colombia</span>
                 </div>
-                <div className="text-muted-foreground">2.8M Followers</div>
-                <div className="text-muted-foreground">🇨🇴 Medellín</div>
+                <div className="text-white/80 font-luxury-sans">2.8M Elite Followers</div>
+                <div className="text-white/80 font-luxury-sans flex items-center space-x-2">
+                  <Anchor className="h-4 w-4" />
+                  <span>Cartagena Marina</span>
+                </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden sexy-glow group">
+            <div className="relative animate-luxury-float">
+              <div className="aspect-[3/4] rounded-3xl overflow-hidden glass-card-luxury group">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F88cadbc94e5b4c93a8abd3e9003eeabe?format=webp&width=800"
-                  alt="Eimy Contreras - Colombian Supermodel"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  alt="Eimy Contreras - Colombian Luxury Goddess"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex items-center justify-between text-white">
-                    <div>
-                      <div className="text-lg font-bold">@soyeimycontreras</div>
-                      <div className="text-sm opacity-80">
-                        Colombian Goddess
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute bottom-8 left-8 right-8">
+                  <div className="glass-card-luxury p-6">
+                    <div className="flex items-center justify-between text-white">
+                      <div>
+                        <div className="text-2xl font-luxury-display font-bold">@soyeimycontreras</div>
+                        <div className="text-lg opacity-90 font-luxury-script">Colombian Luxury Goddess</div>
                       </div>
+                      <Button size="sm" className="btn-gold px-6 py-3">
+                        Follow
+                      </Button>
                     </div>
-                    <Button
-                      size="sm"
-                      className="bg-primary/80 hover:bg-primary"
-                    >
-                      Follow
-                    </Button>
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-primary to-gold text-white p-4 rounded-2xl shadow-xl animate-glow">
-                <div className="flex items-center space-x-2">
-                  <Flame className="h-5 w-5" />
-                  <span className="font-bold">Most Wanted</span>
+              <div className="absolute -top-8 -right-8 glass-card-luxury p-6 animate-luxury-glow">
+                <div className="flex items-center space-x-3">
+                  <Diamond className="h-6 w-6 text-gold animate-luxury-pulse" />
+                  <span className="font-luxury-display font-bold text-xl text-gold">Ultra Exclusive</span>
                 </div>
               </div>
             </div>
@@ -345,95 +365,100 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Live Stats Bar */}
-      <section className="bg-primary text-primary-foreground py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center space-x-12 text-center">
-            <div className="flex items-center space-x-3">
-              <TrendingUp className="h-6 w-6 text-gold animate-pulse" />
+      {/* Luxury Live Stats Bar */}
+      <section className="relative py-8 overflow-hidden">
+        {/* Penthouse Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url(https://images.pexels.com/photos/8572163/pexels-photo-8572163.jpeg)",
+          }}
+        />
+        <div className="absolute inset-0 glass-nav" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="flex items-center justify-center space-x-16 text-center">
+            <div className="flex items-center space-x-4">
+              <TrendingUp className="h-8 w-8 text-gold animate-luxury-pulse" />
               <div>
-                <div className="text-2xl font-bold">
+                <div className="text-3xl font-luxury-display font-bold text-gold">
                   {liveCount.toLocaleString()}
                 </div>
-                <div className="text-sm opacity-90">Active Fans</div>
+                <div className="text-lg text-white/90 font-luxury-sans">Elite Members</div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Heart className="h-6 w-6 text-gold animate-pulse" />
+            <div className="flex items-center space-x-4">
+              <Heart className="h-8 w-8 text-primary animate-luxury-pulse" />
               <div>
-                <div className="text-2xl font-bold">847K</div>
-                <div className="text-sm opacity-90">Loves Today</div>
+                <div className="text-3xl font-luxury-display font-bold text-primary">2.8M</div>
+                <div className="text-lg text-white/90 font-luxury-sans">Luxury Loves</div>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Crown className="h-6 w-6 text-gold animate-pulse" />
+            <div className="flex items-center space-x-4">
+              <Yacht className="h-8 w-8 text-blue animate-luxury-pulse" />
               <div>
-                <div className="text-2xl font-bold">VIP</div>
-                <div className="text-sm opacity-90">Members Only</div>
+                <div className="text-3xl font-luxury-display font-bold text-blue">VIP</div>
+                <div className="text-lg text-white/90 font-luxury-sans">Yacht Club</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* VIP Experiences */}
-      <section className="relative py-20 overflow-hidden">
+      {/* Ultra-Luxury VIP Experiences */}
+      <section className="relative py-24 overflow-hidden">
         {/* Colombian Flag Background */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/14559379/pexels-photo-14559379.jpeg)'
+            backgroundImage: "url(https://images.pexels.com/photos/14559379/pexels-photo-14559379.jpeg)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-display font-bold mb-6 text-gradient-red">
-              Exclusive <span className="font-script">Experiences</span>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-6xl lg:text-7xl font-luxury-display font-bold mb-8 text-gradient-luxury">
+              Ultra-Exclusive <span className="font-luxury-script text-7xl lg:text-8xl">Experiences</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-serif italic">
-              Indulge in premium experiences designed to fulfill your deepest
-              desires and fantasies
+            <p className="text-2xl text-white/80 max-w-4xl mx-auto font-luxury-script leading-relaxed">
+              Indulge in the world's most exclusive Colombian luxury experiences, 
+              crafted for those who demand perfection beyond imagination
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {vipExperiences.map((experience, index) => (
               <Card
                 key={index}
-                className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden ${
-                  experience.sexy ? "sexy-card animate-glow" : "sexy-card"
+                className={`glass-card-luxury group hover:shadow-luxury-gold transition-all duration-700 hover:-translate-y-4 overflow-hidden ${
+                  experience.sexy ? "animate-luxury-glow" : ""
                 }`}
               >
-                <CardContent className="p-6 text-center relative">
+                <CardContent className="p-8 text-center relative">
                   {experience.sexy && (
-                    <div className="absolute top-2 right-2">
-                      <Flame className="h-4 w-4 text-primary animate-pulse" />
+                    <div className="absolute top-4 right-4">
+                      <Flame className="h-6 w-6 text-primary animate-luxury-pulse" />
                     </div>
                   )}
-                  <div className="bg-gradient-to-br from-primary/20 to-gold/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <experience.icon className="h-10 w-10 text-primary" />
+                  <div className="glass-card bg-gradient-to-br from-gold/20 to-primary/20 w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <experience.icon className="h-12 w-12 text-gold" />
                   </div>
-                  <h3 className="font-display font-bold text-xl mb-2 text-primary">
+                  <h3 className="font-luxury-display font-bold text-2xl mb-4 text-gold">
                     {experience.name}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4 font-serif italic">
+                  <p className="text-white/80 text-lg mb-6 font-luxury-script leading-relaxed">
                     {experience.description}
                   </p>
-                  <div className="text-sm text-gold mb-4">
-                    {experience.duration}
-                  </div>
-                  <div className="space-y-4">
-                    <div className="text-3xl font-bold text-primary">
+                  <div className="text-lg text-gold/80 mb-6 font-luxury-sans">{experience.duration}</div>
+                  <div className="space-y-6">
+                    <div className="text-4xl font-luxury-display font-bold text-gold">
                       {experience.price}
                     </div>
                     <Button
-                      className={
-                        experience.sexy
-                          ? "w-full btn-sexy"
-                          : "w-full btn-primary"
-                      }
+                      className={experience.sexy ? "w-full btn-luxury" : "w-full btn-gold"}
+                      size="lg"
                     >
-                      {experience.sexy ? "Get Intimate" : "Book Now"}
+                      {experience.sexy ? "Reserve Ultra Experience" : "Book Luxury"}
                     </Button>
                   </div>
                 </CardContent>
@@ -444,50 +469,57 @@ export default function Index() {
       </section>
 
       {/* Exclusive Content Gallery */}
-      <section className="py-20 bg-card/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-display font-bold mb-6">
-              <span className="text-gradient-red font-script">Exclusive</span>{" "}
-              Content
+      <section className="relative py-24 overflow-hidden">
+        {/* Marina Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+          style={{
+            backgroundImage: "url(https://images.pexels.com/photos/42092/pexels-photo-42092.jpeg)",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/90" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-6xl lg:text-7xl font-luxury-display font-bold mb-8">
+              <span className="text-gradient-luxury font-luxury-script text-7xl lg:text-8xl">Exclusive</span>{" "}
+              <span className="text-gold">Content</span>
             </h2>
-            <p className="text-xl text-muted-foreground font-serif italic">
-              Behind-the-scenes moments you won't find anywhere else
+            <p className="text-2xl text-white/80 font-luxury-script leading-relaxed">
+              Behind-the-scenes luxury moments from the world's most exclusive locations
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {exclusiveContent.map((item, index) => (
               <Card
                 key={index}
-                className="group cursor-pointer overflow-hidden hover:shadow-2xl transition-all duration-500 sexy-card"
+                className="glass-card-luxury group cursor-pointer overflow-hidden hover:shadow-luxury-gold transition-all duration-700 hover:scale-105"
               >
                 <div className="relative aspect-[4/5]">
                   <img
                     src={item.thumbnail}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-1000"
                   />
                   {item.type === "video" && (
-                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                      <div className="bg-white/90 rounded-full p-4 group-hover:scale-110 transition-transform">
-                        <Play className="h-8 w-8 text-primary" />
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                      <div className="glass-card-luxury rounded-full p-6 group-hover:scale-110 transition-transform">
+                        <Play className="h-10 w-10 text-gold" />
                       </div>
                     </div>
                   )}
                   {item.premium && (
-                    <Badge className="absolute top-3 right-3 bg-gold text-gold-foreground animate-pulse">
-                      <Crown className="w-3 h-3 mr-1" />
-                      VIP
+                    <Badge className="absolute top-4 right-4 glass-card-luxury px-4 py-2 bg-gold/20 text-gold animate-luxury-pulse">
+                      <Crown className="w-4 h-4 mr-2" />
+                      Ultra VIP
                     </Badge>
                   )}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                    <h3 className="text-white font-bold text-lg font-display">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
+                    <h3 className="text-white font-luxury-display font-bold text-2xl mb-2">
                       {item.title}
                     </h3>
                     {item.premium && (
-                      <p className="text-gold text-sm font-serif italic">
-                        Premium Content
-                      </p>
+                      <p className="text-gold text-lg font-luxury-script">Ultra-Premium Content</p>
                     )}
                   </div>
                 </div>
@@ -497,59 +529,65 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Luxury Merchandise */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-display font-bold mb-6 text-gradient-red">
-              Luxury <span className="font-script">Collection</span>
+      {/* Ultra-Luxury Merchandise */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Resort Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url(https://images.pexels.com/photos/8085365/pexels-photo-8085365.jpeg)",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 to-background/90" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-6xl lg:text-7xl font-luxury-display font-bold mb-8 text-gradient-luxury">
+              Ultra-Luxury <span className="font-luxury-script text-7xl lg:text-8xl">Collection</span>
             </h2>
-            <p className="text-xl text-muted-foreground font-serif italic">
-              Exclusive merchandise for my most devoted fans
+            <p className="text-2xl text-white/80 font-luxury-script leading-relaxed">
+              Exclusive treasures for the world's most distinguished collectors
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
             {luxuryMerchandise.map((product, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-2xl transition-all duration-500 sexy-card overflow-hidden"
+                className="glass-card-luxury group hover:shadow-luxury-gold transition-all duration-700 hover:-translate-y-2 overflow-hidden"
               >
-                <div className="aspect-square relative overflow-hidden">
+                <div className="aspect-square relative overflow-hidden rounded-t-2xl">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   {product.exclusive && (
-                    <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground animate-pulse">
-                      <Flame className="w-3 h-3 mr-1" />
-                      Exclusive
+                    <Badge className="absolute top-4 left-4 glass-card-luxury px-4 py-2 bg-primary/20 text-primary animate-luxury-pulse">
+                      <Gem className="w-4 h-4 mr-2" />
+                      Ultra Exclusive
                     </Badge>
                   )}
-                  <Badge className="absolute top-3 right-3 bg-gold text-gold-foreground">
+                  <Badge className="absolute top-4 right-4 glass-card bg-gold/20 text-gold border-gold/30 px-4 py-2">
                     {product.limited}
                   </Badge>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-display font-bold text-lg mb-2 text-primary">
+                <CardContent className="p-8">
+                  <h3 className="font-luxury-display font-bold text-2xl mb-4 text-gold">
                     {product.name}
                   </h3>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-gold">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-3xl font-luxury-display font-bold text-gold">
                       {product.price}
                     </span>
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-4 w-4 text-gold fill-current"
-                        />
+                        <Star key={i} className="h-5 w-5 text-gold fill-current" />
                       ))}
                     </div>
                   </div>
-                  <Button className="w-full btn-sexy">
-                    <ShoppingCart className="h-4 w-4 mr-2" />
-                    Add to Cart
+                  <Button className="w-full btn-luxury text-lg">
+                    <ShoppingCart className="h-5 w-5 mr-3" />
+                    Acquire Luxury
                   </Button>
                 </CardContent>
               </Card>
@@ -558,66 +596,84 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Top Fans Leaderboard */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+      {/* Ultra-Elite Fans Leaderboard */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Penthouse Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{
+            backgroundImage: "url(https://images.pexels.com/photos/8572163/pexels-photo-8572163.jpeg)",
+          }}
+        />
+        <div className="absolute inset-0 glass-nav" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="text-5xl font-display font-bold mb-8 text-gold font-script">
-                Top Lovers
+              <h2 className="text-6xl font-luxury-display font-bold mb-10 text-gold font-luxury-script">
+                Elite Yacht Club
               </h2>
-              <p className="text-lg opacity-90 mb-8 font-serif italic">
-                My most devoted fans who shower me with love
+              <p className="text-2xl text-white/90 mb-12 font-luxury-script leading-relaxed">
+                The world's most distinguished collectors and luxury enthusiasts
               </p>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {topFans.map((fan) => (
                   <div
                     key={fan.rank}
-                    className="flex items-center space-x-6 bg-white/10 rounded-xl p-6 backdrop-blur-sm"
+                    className="glass-card-luxury p-8 hover:shadow-luxury-gold transition-all duration-500"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-gold-foreground font-bold text-lg">
-                      #{fan.rank}
-                    </div>
-                    <div className="flex-1">
-                      <div className="font-bold text-lg flex items-center space-x-2">
-                        <span>{fan.name}</span>
-                        <span>{fan.country}</span>
+                    <div className="flex items-center space-x-8">
+                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-gold to-primary rounded-2xl flex items-center justify-center text-white font-luxury-display font-bold text-xl shadow-luxury">
+                        #{fan.rank}
                       </div>
-                      <div className="text-gold font-semibold">
-                        Spent: {fan.spent}
+                      <div className="flex-1">
+                        <div className="font-luxury-display font-bold text-2xl flex items-center space-x-3 text-gold mb-2">
+                          <span>{fan.name}</span>
+                          <span>{fan.country}</span>
+                        </div>
+                        <div className="text-lg text-primary font-luxury-sans mb-1">
+                          Investment: {fan.spent}
+                        </div>
+                        <div className="text-gold/80 font-luxury-script">{fan.title}</div>
                       </div>
+                      <Diamond className="h-8 w-8 text-gold animate-luxury-pulse" />
                     </div>
-                    <Crown className="h-6 w-6 text-gold animate-pulse" />
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-white/10 rounded-3xl p-8 backdrop-blur-sm">
-              <h3 className="text-3xl font-display font-bold mb-6 text-gold font-script">
-                Join My Inner Circle
+            <div className="glass-card-luxury p-12">
+              <h3 className="text-4xl font-luxury-display font-bold mb-8 text-gold font-luxury-script">
+                Join the Elite
               </h3>
-              <div className="space-y-6">
-                <p className="opacity-90 font-serif italic text-lg">
-                  Become part of my exclusive VIP community and enjoy benefits
-                  that will make your heart race.
+              <div className="space-y-8">
+                <p className="text-white/90 font-luxury-script text-xl leading-relaxed">
+                  Become part of the world's most exclusive luxury community and experience 
+                  privileges that transcend imagination.
                 </p>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Heart className="h-5 w-5 text-gold" />
-                    <span>Private messages and personal attention</span>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <Yacht className="h-6 w-6 text-gold" />
+                    <span className="text-lg text-white/90 font-luxury-sans">
+                      Private yacht access worldwide
+                    </span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Camera className="h-5 w-5 text-gold" />
-                    <span>Exclusive content and behind-the-scenes</span>
+                  <div className="flex items-center space-x-4">
+                    <Diamond className="h-6 w-6 text-gold" />
+                    <span className="text-lg text-white/90 font-luxury-sans">
+                      Ultra-exclusive content and experiences
+                    </span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Gift className="h-5 w-5 text-gold" />
-                    <span>Special gifts and surprises</span>
+                  <div className="flex items-center space-x-4">
+                    <Crown className="h-6 w-6 text-gold" />
+                    <span className="text-lg text-white/90 font-luxury-sans">
+                      Royal treatment and VIP privileges
+                    </span>
                   </div>
                 </div>
-                <Button className="w-full bg-gold text-gold-foreground hover:bg-gold/90 py-4 text-lg font-bold">
-                  <Crown className="mr-2 h-5 w-5" />
-                  Become VIP Member
+                <Button className="w-full btn-luxury py-6 text-xl font-luxury-display tracking-wider">
+                  <Crown className="mr-3 h-6 w-6" />
+                  Join Elite Circle
                 </Button>
               </div>
             </div>
@@ -625,48 +681,46 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Press & Features */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Tropical Sunset Background */}
+      {/* Ultra-Luxury Press & Features */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Luxury Marina Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
           style={{
-            backgroundImage:
-              "url(https://images.pexels.com/photos/8267269/pexels-photo-8267269.jpeg)",
+            backgroundImage: "url(https://images.pexels.com/photos/42092/pexels-photo-42092.jpeg)",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-display font-bold mb-6 text-gradient-red">
-              In the <span className="font-script">Spotlight</span>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 to-background/90" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-6xl lg:text-7xl font-luxury-display font-bold mb-8 text-gradient-luxury">
+              In the <span className="font-luxury-script text-7xl lg:text-8xl">Spotlight</span>
             </h2>
-            <p className="text-xl text-muted-foreground font-serif italic">
-              What the world is saying about Colombia's finest
+            <p className="text-2xl text-white/80 font-luxury-script leading-relaxed">
+              What the world's most prestigious publications say about Colombia's luxury icon
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {pressFeatures.map((item, index) => (
               <Card
                 key={index}
-                className={`text-center p-8 hover:shadow-xl transition-shadow sexy-card ${
-                  item.featured ? "border-primary/50" : ""
+                className={`glass-card-luxury text-center p-12 hover:shadow-luxury-gold transition-all duration-500 hover:-translate-y-2 ${
+                  item.featured ? "border-gold/30" : ""
                 }`}
               >
-                <div className="space-y-6">
-                  <div className="text-primary font-bold text-xl font-display">
+                <div className="space-y-8">
+                  <div className="text-gold font-luxury-display font-bold text-2xl">
                     {item.outlet}
                   </div>
-                  <blockquote className="text-2xl font-display italic text-gradient-red leading-relaxed">
+                  <blockquote className="text-3xl font-luxury-display font-bold text-gradient-luxury leading-relaxed">
                     {item.headline}
                   </blockquote>
-                  <div className="text-muted-foreground font-serif">
-                    {item.date}
-                  </div>
+                  <div className="text-white/70 font-luxury-script text-lg">{item.date}</div>
                   {item.featured && (
-                    <Badge className="bg-gold/20 text-gold border-gold/30">
-                      <Star className="w-3 h-3 mr-1" />
-                      Featured
+                    <Badge className="glass-card bg-gold/20 text-gold border-gold/30 px-6 py-3">
+                      <Star className="w-4 h-4 mr-2" />
+                      Featured Excellence
                     </Badge>
                   )}
                 </div>
@@ -676,136 +730,116 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Sultry Footer */}
-      <footer className="bg-gradient-to-b from-background to-black text-foreground py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-gold rounded-full flex items-center justify-center">
-                  <Crown className="h-6 w-6 text-white" />
+      {/* Ultra-Luxury Footer */}
+      <footer className="relative py-20 overflow-hidden">
+        {/* Resort Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url(https://images.pexels.com/photos/8085365/pexels-photo-8085365.jpeg)",
+          }}
+        />
+        <div className="absolute inset-0 glass-nav" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid md:grid-cols-4 gap-12">
+            <div className="space-y-8">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-gold via-primary to-blue rounded-3xl flex items-center justify-center shadow-luxury">
+                  <Crown className="h-8 w-8 text-white" />
                 </div>
                 <div>
-                  <span className="text-2xl font-script font-bold text-gradient-red">
+                  <span className="text-3xl font-luxury-display font-bold text-gradient-luxury">
                     Eimy Contreras
                   </span>
-                  <div className="text-sm text-muted-foreground">
-                    Colombian Goddess
-                  </div>
+                  <div className="text-lg text-gold/90 font-luxury-script">Colombian Luxury Goddess</div>
                 </div>
               </div>
-              <p className="text-muted-foreground font-serif italic">
-                Official page of Colombia's most sensual supermodel. Experience
-                passion like never before.
+              <p className="text-white/80 font-luxury-script text-lg leading-relaxed">
+                The world's most exclusive Colombian supermodel experience. 
+                Where luxury meets passion in perfect harmony.
               </p>
-              <div className="flex space-x-4">
-                <Instagram className="h-6 w-6 text-primary hover:text-primary/80 cursor-pointer transition-colors" />
-                <Twitter className="h-6 w-6 text-primary hover:text-primary/80 cursor-pointer transition-colors" />
-                <Facebook className="h-6 w-6 text-primary hover:text-primary/80 cursor-pointer transition-colors" />
+              <div className="flex space-x-6">
+                <Instagram className="h-8 w-8 text-gold hover:text-gold/80 cursor-pointer transition-colors" />
+                <Twitter className="h-8 w-8 text-gold hover:text-gold/80 cursor-pointer transition-colors" />
+                <Facebook className="h-8 w-8 text-gold hover:text-gold/80 cursor-pointer transition-colors" />
               </div>
             </div>
             <div>
-              <h3 className="font-bold text-primary mb-4 font-display">
-                Experiences
+              <h3 className="font-luxury-display font-bold text-gold mb-6 text-xl">
+                Ultra Experiences
               </h3>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-4 text-white/80 font-luxury-sans">
                 <li>
-                  <Link
-                    to="/services"
-                    className="hover:text-primary transition-colors"
-                  >
-                    VIP Calls
+                  <Link to="/services" className="hover:text-gold transition-colors text-lg">
+                    Private Yacht Adventures
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/services"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Exclusive Content
+                  <Link to="/services" className="hover:text-gold transition-colors text-lg">
+                    Penthouse Encounters
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/services"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Personal Messages
+                  <Link to="/services" className="hover:text-gold transition-colors text-lg">
+                    Elite Marina Sessions
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/services"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Virtual Dates
+                  <Link to="/services" className="hover:text-gold transition-colors text-lg">
+                    Colombian Goddess Experience
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-primary mb-4 font-display">
-                Luxury Shop
+              <h3 className="font-luxury-display font-bold text-gold mb-6 text-xl">
+                Luxury Collection
               </h3>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-4 text-white/80 font-luxury-sans">
                 <li>
-                  <Link
-                    to="/shop"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Lingerie Collection
+                  <Link to="/shop" className="hover:text-gold transition-colors text-lg">
+                    Diamond Collection
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/shop"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Jewelry
+                  <Link to="/shop" className="hover:text-gold transition-colors text-lg">
+                    Colombian Emeralds
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/shop"
-                    className="hover:text-primary transition-colors"
-                  >
-                    Signed Photos
+                  <Link to="/shop" className="hover:text-gold transition-colors text-lg">
+                    Yacht Club Membership
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/shop"
-                    className="hover:text-primary transition-colors"
-                  >
-                    VIP Experiences
+                  <Link to="/shop" className="hover:text-gold transition-colors text-lg">
+                    Private Island Access
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-primary mb-4 font-display">
-                Contact
-              </h3>
-              <div className="space-y-3 text-muted-foreground">
-                <div className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4" />
-                  <span>hello@eimycontreras.com</span>
+              <h3 className="font-luxury-display font-bold text-gold mb-6 text-xl">Elite Contact</h3>
+              <div className="space-y-4 text-white/80 font-luxury-sans">
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-5 w-5" />
+                  <span className="text-lg">elite@eimycontreras.com</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Instagram className="h-4 w-4" />
-                  <span>@soyeimycontreras</span>
+                <div className="flex items-center space-x-3">
+                  <Instagram className="h-5 w-5" />
+                  <span className="text-lg">@soyeimycontreras</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="h-4 w-4" />
-                  <span>Medellín, Colombia 🇨���</span>
+                <div className="flex items-center space-x-3">
+                  <Anchor className="h-5 w-5" />
+                  <span className="text-lg">Cartagena Marina, Colombia 🇨🇴</span>
                 </div>
               </div>
             </div>
           </div>
-          <div className="border-t border-primary/20 mt-12 pt-8 text-center text-muted-foreground">
-            <p className="font-serif italic">
-              &copy; 2024 Eimy Contreras Official. All rights reserved. Made
-              with ❤️ in Colombia
+          <div className="border-t border-gold/20 mt-16 pt-12 text-center text-white/60">
+            <p className="font-luxury-script text-lg">
+              &copy; 2024 Eimy Contreras Official. Ultra-Luxury Experience. Made with 💎 in Colombia
             </p>
           </div>
         </div>
