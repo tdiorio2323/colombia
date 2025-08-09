@@ -34,10 +34,10 @@ export default function Index() {
   }, []);
 
   const galleryItems = [
-    { type: 'image', thumbnail: '/placeholder.svg', title: 'Behind the Scenes' },
-    { type: 'video', thumbnail: '/placeholder.svg', title: 'Latest Performance' },
-    { type: 'image', thumbnail: '/placeholder.svg', title: 'Studio Session' },
-    { type: 'video', thumbnail: '/placeholder.svg', title: 'Fan Moments' },
+    { type: 'image', thumbnail: 'https://images.pexels.com/photos/33136893/pexels-photo-33136893.jpeg', title: 'Behind the Scenes' },
+    { type: 'video', thumbnail: 'https://images.pexels.com/photos/9419224/pexels-photo-9419224.jpeg', title: 'Latest Performance' },
+    { type: 'image', thumbnail: 'https://images.pexels.com/photos/5648355/pexels-photo-5648355.jpeg', title: 'Studio Session' },
+    { type: 'video', thumbnail: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg', title: 'Fan Moments' },
   ];
 
   const services = [
