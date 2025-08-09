@@ -377,8 +377,16 @@ export default function Index() {
       </section>
 
       {/* VIP Experiences */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 overflow-hidden">
+        {/* Colombian Flag Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/14559379/pexels-photo-14559379.jpeg)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-display font-bold mb-6 text-gradient-red">
               Exclusive <span className="font-script">Experiences</span>
@@ -789,7 +797,7 @@ export default function Index() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4" />
-                  <span>Medellín, Colombia 🇨🇴</span>
+                  <span>Medellín, Colombia 🇨���</span>
                 </div>
               </div>
             </div>
