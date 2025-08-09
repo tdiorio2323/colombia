@@ -1,76 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Optima:wght@400;500;600;700&family=Avenir:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   /**
-   * Colombian Flag Colors Theme - Sexy & Sultry
-   * Red: #CE1126 (Primary - Passion)
-   * Yellow: #FFCD00 (Gold - Luxury) 
-   * Blue: #003893 (Deep Blue - Elegance)
+   * Ultra-Luxury Colombian Supermodel Theme
+   * Red: #CE1126 (Colombian Red - Passion)
+   * Gold: #FFD700 (Pure Gold - Luxury) 
+   * Blue: #003893 (Colombian Blue - Elegance)
+   * Crystal: rgba(255,255,255,0.1) - Glassmorphism
    */
   :root {
-    --background: 20 10% 4%; /* Dark sultry background */
-    --foreground: 0 0% 98%; /* Light text */
+    --background: 15 15% 8%; /* Rich dark luxury background */
+    --foreground: 0 0% 98%; /* Pure white text */
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 12%; /* Darker luxury cards */
+    --card-foreground: 0 0% 96%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 348 87% 47%; /* #CE1126 Colombian Red */
+    --primary: 348 87% 50%; /* #CE1126 Colombian Red */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 20 15% 12%; 
+    --secondary: 15 20% 15%; 
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 20 10% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 15 15% 18%;
+    --muted-foreground: 0 0% 75%;
 
-    --accent: 348 87% 47%; /* Colombian Red accent */
+    --accent: 348 87% 50%; /* Colombian Red accent */
     --accent-foreground: 0 0% 98%;
 
-    --gold: 48 100% 50%; /* #FFCD00 Colombian Yellow */
+    --gold: 51 100% 50%; /* #FFD700 Pure Gold */
     --gold-foreground: 0 0% 10%;
 
     --blue: 216 100% 29%; /* #003893 Colombian Blue */
     --blue-foreground: 0 0% 98%;
 
+    --crystal: 0 0% 100%; /* White crystal base */
+    --crystal-dark: 0 0% 0%; /* Black crystal base */
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 20 15% 20%;
-    --input: 20 15% 15%;
-    --ring: 348 87% 47%; /* Red ring */
+    --border: 15 15% 25%;
+    --input: 15 15% 20%;
+    --ring: 348 87% 50%; /* Red ring */
 
-    --radius: 0.75rem;
+    --radius: 1rem; /* Larger radius for luxury feel */
+
+    /* Glassmorphism Variables */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    --glass-backdrop: blur(20px);
   }
 
   .light {
-    --background: 48 100% 97%; /* Light Colombian yellow background */
-    --foreground: 20 20% 10%;
+    --background: 51 100% 98%; /* Light gold background */
+    --foreground: 15 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 20% 10%;
+    --card-foreground: 15 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 20% 10%;
+    --popover-foreground: 15 25% 10%;
 
-    --primary: 348 87% 47%; /* Keep red primary */
+    --primary: 348 87% 50%; /* Keep red primary */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 48 80% 92%;
-    --secondary-foreground: 20 20% 10%;
+    --secondary: 51 80% 95%;
+    --secondary-foreground: 15 25% 10%;
 
-    --muted: 48 50% 90%;
-    --muted-foreground: 20 15% 40%;
+    --muted: 51 50% 92%;
+    --muted-foreground: 15 20% 45%;
 
-    --accent: 348 87% 47%;
+    --accent: 348 87% 50%;
     --accent-foreground: 0 0% 98%;
 
-    --gold: 48 100% 50%;
+    --gold: 51 100% 50%;
     --gold-foreground: 0 0% 10%;
 
     --blue: 216 100% 29%;
@@ -79,9 +89,14 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 48 50% 85%;
-    --input: 48 50% 90%;
-    --ring: 348 87% 47%;
+    --border: 51 50% 85%;
+    --input: 51 50% 90%;
+    --ring: 348 87% 50%;
+
+    /* Light mode glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -91,59 +106,197 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(20 15% 6%) 100%);
+    @apply bg-background text-foreground;
+    background: radial-gradient(circle at 50% 50%, hsl(15 15% 12%) 0%, hsl(15 15% 8%) 100%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    font-family: 'Crimson Text', serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
   }
 
-  .font-script {
-    font-family: 'Dancing Script', cursive;
+  .font-luxury-display {
+    font-family: 'Crimson Text', serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
-  .font-serif {
-    font-family: 'Cormorant Garamond', serif;
+  .font-luxury-body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+
+  .font-luxury-script {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .font-luxury-sans {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.05em;
   }
 }
 
 @layer utilities {
+  /* Luxury Gradients */
   .text-gradient {
     @apply bg-gradient-to-r from-primary via-gold to-blue bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-luxury {
+    @apply bg-gradient-to-r from-gold via-primary to-gold bg-clip-text text-transparent;
   }
   
   .text-gradient-red {
     @apply bg-gradient-to-r from-primary to-gold bg-clip-text text-transparent;
   }
-  
+
+  /* Luxury Buttons */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-2xl hover:shadow-3xl border border-primary/20;
+    backdrop-filter: blur(20px);
   }
   
   .btn-gold {
-    @apply bg-gold text-gold-foreground hover:bg-gold/90 transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-gold text-gold-foreground hover:bg-gold/90 transition-all duration-300 shadow-2xl hover:shadow-3xl border border-gold/20;
+    backdrop-filter: blur(20px);
+  }
+
+  .btn-luxury {
+    @apply bg-gradient-to-r from-gold via-primary to-gold text-white hover:from-gold/90 hover:via-primary/90 hover:to-gold/90 transition-all duration-500 shadow-2xl hover:shadow-3xl transform hover:scale-105 border border-gold/30;
+    backdrop-filter: blur(20px);
+    background-size: 200% 200%;
+    animation: luxury-shimmer 3s ease infinite;
   }
 
   .btn-sexy {
-    @apply bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:from-primary/90 hover:to-primary/70 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
+    @apply bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:from-primary/90 hover:to-primary/70 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 border border-primary/20;
+    backdrop-filter: blur(20px);
+  }
+
+  /* Glassmorphism Cards */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-backdrop);
+    -webkit-backdrop-filter: var(--glass-backdrop);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 1rem;
+  }
+
+  .glass-card-luxury {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(206, 17, 38, 0.05) 50%, rgba(0, 56, 147, 0.1) 100%);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+  }
+
+  .glass-nav {
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
   .sexy-glow {
-    box-shadow: 0 0 20px rgba(206, 17, 38, 0.3);
+    box-shadow: 0 0 30px rgba(206, 17, 38, 0.4), 0 0 60px rgba(255, 215, 0, 0.2);
+  }
+
+  .luxury-glow {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.3), 0 0 80px rgba(206, 17, 38, 0.1);
   }
 
   .sexy-border {
     border: 1px solid rgba(206, 17, 38, 0.3);
-    box-shadow: 0 0 10px rgba(206, 17, 38, 0.1);
+    box-shadow: 0 0 20px rgba(206, 17, 38, 0.15);
   }
 
   .colombia-gradient {
-    background: linear-gradient(135deg, #FFCD00 0%, #CE1126 50%, #003893 100%);
+    background: linear-gradient(135deg, #FFD700 0%, #CE1126 50%, #003893 100%);
   }
 
-  .sexy-card {
-    @apply backdrop-blur-sm bg-card/80 border-primary/20;
-    box-shadow: 0 8px 32px rgba(206, 17, 38, 0.1);
+  .luxury-bg {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(206, 17, 38, 0.03) 50%, rgba(0, 56, 147, 0.05) 100%);
   }
+
+  /* Luxury Text Effects */
+  .text-luxury-gold {
+    color: #FFD700;
+    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+  }
+
+  .text-luxury-shadow {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(255, 215, 0, 0.2);
+  }
+
+  /* Animations */
+  @keyframes luxury-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes luxury-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes luxury-pulse {
+    0%, 100% { 
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    }
+    50% { 
+      opacity: 0.9;
+      transform: scale(1.05);
+      box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+    }
+  }
+
+  .animate-luxury-float {
+    animation: luxury-float 3s ease-in-out infinite;
+  }
+
+  .animate-luxury-pulse {
+    animation: luxury-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-luxury-shimmer {
+    animation: luxury-shimmer 3s ease infinite;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFD700, #CE1126);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #CE1126, #FFD700);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: #FFD700;
 }
