@@ -563,7 +563,7 @@ export default function Index() {
                   />
                   {product.exclusive && (
                     <Badge className="absolute top-4 left-4 glass-card-luxury px-4 py-2 bg-primary/20 text-primary animate-luxury-pulse">
-                      <Gem className="w-4 h-4 mr-2" />
+                      <Diamond className="w-4 h-4 mr-2" />
                       Ultra Exclusive
                     </Badge>
                   )}
