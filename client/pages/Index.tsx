@@ -103,8 +103,15 @@ export default function Index() {
 
       {/* Sultry Hero Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 colombia-gradient opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        {/* Colombian Ocean Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg)'
+          }}
+        />
+        <div className="absolute inset-0 colombia-gradient opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/90" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
