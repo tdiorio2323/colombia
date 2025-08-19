@@ -14,14 +14,14 @@ export default {
     },
     extend: {
       fontFamily: {
-        'luxury-display': ['Crimson Text', 'serif'],
-        'luxury-body': ['Montserrat', 'sans-serif'],
-        'luxury-script': ['Libre Baskerville', 'serif'],
-        'luxury-sans': ['Avenir', 'sans-serif'],
-        'display': ['Crimson Text', 'serif'],
-        'body': ['Montserrat', 'sans-serif'],
-        'script': ['Libre Baskerville', 'serif'],
-        'serif': ['Crimson Text', 'serif'],
+        "luxury-display": ["Crimson Text", "serif"],
+        "luxury-body": ["Montserrat", "sans-serif"],
+        "luxury-script": ["Libre Baskerville", "serif"],
+        "luxury-sans": ["Avenir", "sans-serif"],
+        display: ["Crimson Text", "serif"],
+        body: ["Montserrat", "sans-serif"],
+        script: ["Libre Baskerville", "serif"],
+        serif: ["Crimson Text", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -79,26 +79,35 @@ export default {
         "3xl": "2.5rem",
       },
       backgroundImage: {
-        'colombia-flag': 'linear-gradient(135deg, #FFD700 0%, #CE1126 50%, #003893 100%)',
-        'luxury-gold': 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
-        'luxury-red': 'linear-gradient(135deg, #CE1126 0%, #8B0000 100%)',
-        'luxury-gradient': 'linear-gradient(135deg, #FFD700 0%, #CE1126 50%, #003893 100%)',
-        'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
-        'luxury-marina': 'url(https://images.pexels.com/photos/42092/pexels-photo-42092.jpeg)',
-        'luxury-resort': 'url(https://images.pexels.com/photos/8085365/pexels-photo-8085365.jpeg)',
-        'luxury-penthouse': 'url(https://images.pexels.com/photos/8572163/pexels-photo-8572163.jpeg)',
+        "colombia-flag":
+          "linear-gradient(135deg, #FFD700 0%, #CE1126 50%, #003893 100%)",
+        "luxury-gold": "linear-gradient(135deg, #FFD700 0%, #FFA500 100%)",
+        "luxury-red": "linear-gradient(135deg, #CE1126 0%, #8B0000 100%)",
+        "luxury-gradient":
+          "linear-gradient(135deg, #FFD700 0%, #CE1126 50%, #003893 100%)",
+        "glass-gradient":
+          "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)",
+        "luxury-marina":
+          "url(https://images.pexels.com/photos/42092/pexels-photo-42092.jpeg)",
+        "luxury-resort":
+          "url(https://images.pexels.com/photos/8085365/pexels-photo-8085365.jpeg)",
+        "luxury-penthouse":
+          "url(https://images.pexels.com/photos/8572163/pexels-photo-8572163.jpeg)",
       },
       boxShadow: {
-        'glass': '0 8px 32px rgba(0, 0, 0, 0.37)',
-        'glass-inset': 'inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-        'luxury': '0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-        'luxury-gold': '0 12px 40px rgba(255, 215, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-        'luxury-red': '0 12px 40px rgba(206, 17, 38, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-        '3xl': '0 35px 60px -12px rgba(0, 0, 0, 0.25)',
+        glass: "0 8px 32px rgba(0, 0, 0, 0.37)",
+        "glass-inset": "inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+        luxury:
+          "0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+        "luxury-gold":
+          "0 12px 40px rgba(255, 215, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+        "luxury-red":
+          "0 12px 40px rgba(206, 17, 38, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+        "3xl": "0 35px 60px -12px rgba(0, 0, 0, 0.25)",
       },
       backdropBlur: {
-        'luxury': '25px',
-        'glass': '20px',
+        luxury: "25px",
+        glass: "20px",
       },
       keyframes: {
         "accordion-down": {

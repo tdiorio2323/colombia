@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Optima:wght@400;500;600;700&family=Avenir:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Optima:wght@400;500;600;700&family=Avenir:wght@300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,7 +24,7 @@
     --primary: 348 87% 50%; /* #CE1126 Colombian Red */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 15 20% 15%; 
+    --secondary: 15 20% 15%;
     --secondary-foreground: 0 0% 95%;
 
     --muted: 15 15% 18%;
@@ -107,38 +107,47 @@
 
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(circle at 50% 50%, hsl(15 15% 12%) 0%, hsl(15 15% 8%) 100%);
-    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(
+      circle at 50% 50%,
+      hsl(15 15% 12%) 0%,
+      hsl(15 15% 8%) 100%
+    );
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     letter-spacing: 0.025em;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Crimson Text', serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Crimson Text", serif;
     font-weight: 700;
     letter-spacing: -0.025em;
   }
 
   .font-luxury-display {
-    font-family: 'Crimson Text', serif;
+    font-family: "Crimson Text", serif;
     font-weight: 700;
     letter-spacing: -0.02em;
   }
 
   .font-luxury-body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     letter-spacing: 0.025em;
   }
 
   .font-luxury-script {
-    font-family: 'Libre Baskerville', serif;
+    font-family: "Libre Baskerville", serif;
     font-style: italic;
     font-weight: 400;
   }
 
   .font-luxury-sans {
-    font-family: 'Avenir', sans-serif;
+    font-family: "Avenir", sans-serif;
     font-weight: 500;
     letter-spacing: 0.05em;
   }
@@ -149,11 +158,11 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary via-gold to-blue bg-clip-text text-transparent;
   }
-  
+
   .text-gradient-luxury {
     @apply bg-gradient-to-r from-gold via-primary to-gold bg-clip-text text-transparent;
   }
-  
+
   .text-gradient-red {
     @apply bg-gradient-to-r from-primary to-gold bg-clip-text text-transparent;
   }
@@ -163,7 +172,7 @@
     @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-2xl hover:shadow-3xl border border-primary/20;
     backdrop-filter: blur(20px);
   }
-  
+
   .btn-gold {
     @apply bg-gold text-gold-foreground hover:bg-gold/90 transition-all duration-300 shadow-2xl hover:shadow-3xl border border-gold/20;
     backdrop-filter: blur(20px);
@@ -192,11 +201,18 @@
   }
 
   .glass-card-luxury {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(206, 17, 38, 0.05) 50%, rgba(0, 56, 147, 0.1) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 215, 0, 0.1) 0%,
+      rgba(206, 17, 38, 0.05) 50%,
+      rgba(0, 56, 147, 0.1) 100%
+    );
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border: 1px solid rgba(255, 215, 0, 0.2);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
     border-radius: 1.5rem;
   }
 
@@ -209,11 +225,15 @@
   }
 
   .sexy-glow {
-    box-shadow: 0 0 30px rgba(206, 17, 38, 0.4), 0 0 60px rgba(255, 215, 0, 0.2);
+    box-shadow:
+      0 0 30px rgba(206, 17, 38, 0.4),
+      0 0 60px rgba(255, 215, 0, 0.2);
   }
 
   .luxury-glow {
-    box-shadow: 0 0 40px rgba(255, 215, 0, 0.3), 0 0 80px rgba(206, 17, 38, 0.1);
+    box-shadow:
+      0 0 40px rgba(255, 215, 0, 0.3),
+      0 0 80px rgba(206, 17, 38, 0.1);
   }
 
   .sexy-border {
@@ -222,42 +242,61 @@
   }
 
   .colombia-gradient {
-    background: linear-gradient(135deg, #FFD700 0%, #CE1126 50%, #003893 100%);
+    background: linear-gradient(135deg, #ffd700 0%, #ce1126 50%, #003893 100%);
   }
 
   .luxury-bg {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(206, 17, 38, 0.03) 50%, rgba(0, 56, 147, 0.05) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 215, 0, 0.05) 0%,
+      rgba(206, 17, 38, 0.03) 50%,
+      rgba(0, 56, 147, 0.05) 100%
+    );
   }
 
   /* Luxury Text Effects */
   .text-luxury-gold {
-    color: #FFD700;
+    color: #ffd700;
     text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
   }
 
   .text-luxury-shadow {
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(255, 215, 0, 0.2);
+    text-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.5),
+      0 2px 10px rgba(255, 215, 0, 0.2);
   }
 
   /* Animations */
   @keyframes luxury-shimmer {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   @keyframes luxury-float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   @keyframes luxury-pulse {
-    0%, 100% { 
+    0%,
+    100% {
       opacity: 1;
       transform: scale(1);
       box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
     }
-    50% { 
+    50% {
       opacity: 0.9;
       transform: scale(1.05);
       box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
@@ -287,16 +326,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #FFD700, #CE1126);
+  background: linear-gradient(180deg, #ffd700, #ce1126);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #CE1126, #FFD700);
+  background: linear-gradient(180deg, #ce1126, #ffd700);
 }
 
 /* Selection */
 ::selection {
   background: rgba(255, 215, 0, 0.3);
-  color: #FFD700;
+  color: #ffd700;
 }
