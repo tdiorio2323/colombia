@@ -87,6 +87,7 @@ export default {
         'luxury-marina': 'url(https://images.pexels.com/photos/42092/pexels-photo-42092.jpeg)',
         'luxury-resort': 'url(https://images.pexels.com/photos/8085365/pexels-photo-8085365.jpeg)',
         'luxury-penthouse': 'url(https://images.pexels.com/photos/8572163/pexels-photo-8572163.jpeg)',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       boxShadow: {
         'glass': '0 8px 32px rgba(0, 0, 0, 0.37)',
