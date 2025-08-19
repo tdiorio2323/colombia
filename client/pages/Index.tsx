@@ -34,6 +34,7 @@ import {
   Gem,
   Shield,
   Star as StarOutline,
+  Clock,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
