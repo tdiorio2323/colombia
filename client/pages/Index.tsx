@@ -232,7 +232,6 @@ export default function Index() {
                 Book
               </Link>
             </div>
-
           </div>
         </div>
       </nav>
