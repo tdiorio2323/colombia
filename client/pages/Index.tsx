@@ -254,66 +254,9 @@ export default function Index() {
         ></div>
 
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <Badge className="glass-card px-4 py-2 bg-gold/20 text-gold border-gold/30">
-                  <Sparkles className="w-4 h-4 mr-2" />
-                  🇨🇴 Colombian Luxury Experience
-                </Badge>
-
-                <h1 className="text-5xl lg:text-7xl font-luxury-display font-bold leading-tight">
-                  <span className="text-gradient-luxury">Eimy</span>
-                  <br />
-                  <span className="text-gold">Contreras</span>
-                </h1>
-
-                <p className="text-xl text-white/90 max-w-lg font-luxury-script leading-relaxed">
-                  Experience the pinnacle of Colombian luxury through exclusive
-                  encounters, private adventures, and unforgettable moments.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="btn-luxury px-8 py-4">
-                  <Ship className="mr-3 h-5 w-5" />
-                  Exclusive Access
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="glass-card text-gold border-gold/30"
-                >
-                  <Instagram className="mr-3 h-5 w-5" />
-                  Follow Journey
-                </Button>
-              </div>
-
-              {/* Clean stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8">
-                <div className="text-center">
-                  <div className="text-2xl font-luxury-display font-bold text-gold">
-                    {(liveCount / 1000000).toFixed(1)}M
-                  </div>
-                  <div className="text-sm text-white/80">Followers</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-luxury-display font-bold text-primary">
-                    127K
-                  </div>
-                  <div className="text-sm text-white/80">VIP Members</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-luxury-display font-bold text-blue">
-                    87
-                  </div>
-                  <div className="text-sm text-white/80">Countries</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Clean portrait */}
-            <div className="relative">
+          <div className="max-w-4xl mx-auto text-center space-y-12 py-12">
+            {/* Photo First */}
+            <div className="relative max-w-md mx-auto">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden glass-card group">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F88cadbc94e5b4c93a8abd3e9003eeabe?format=webp&width=800"
@@ -337,6 +280,64 @@ export default function Index() {
                       </Button>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Title and Content Below */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <Badge className="glass-card px-4 py-2 bg-gold/20 text-gold border-gold/30 inline-flex">
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  🇨🇴 Colombian Luxury Experience
+                </Badge>
+
+                <h1 className="text-5xl lg:text-7xl font-luxury-display font-bold leading-tight">
+                  <span className="text-gradient-luxury">Eimy</span>
+                  <br />
+                  <span className="text-gold">Contreras</span>
+                </h1>
+
+                <p className="text-xl text-white/90 max-w-2xl mx-auto font-luxury-script leading-relaxed">
+                  Experience the pinnacle of Colombian luxury through exclusive
+                  encounters, private adventures, and unforgettable moments.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="btn-luxury px-8 py-4">
+                  <Ship className="mr-3 h-5 w-5" />
+                  Exclusive Access
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="glass-card text-gold border-gold/30"
+                >
+                  <Instagram className="mr-3 h-5 w-5" />
+                  Follow Journey
+                </Button>
+              </div>
+
+              {/* Clean stats */}
+              <div className="grid grid-cols-3 gap-6 pt-8 max-w-lg mx-auto">
+                <div className="text-center">
+                  <div className="text-2xl font-luxury-display font-bold text-gold">
+                    {(liveCount / 1000000).toFixed(1)}M
+                  </div>
+                  <div className="text-sm text-white/80">Followers</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-luxury-display font-bold text-primary">
+                    127K
+                  </div>
+                  <div className="text-sm text-white/80">VIP Members</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-luxury-display font-bold text-blue">
+                    87
+                  </div>
+                  <div className="text-sm text-white/80">Countries</div>
                 </div>
               </div>
             </div>
