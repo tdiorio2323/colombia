@@ -233,10 +233,6 @@ export default function Index() {
               </Link>
             </div>
 
-            <Button className="btn-luxury px-6 py-2">
-              <Zap className="mr-2 h-4 w-4" />
-              Join Elite
-            </Button>
           </div>
         </div>
       </nav>
