@@ -18,15 +18,6 @@
     --card: 0 0% 12%; /* Darker cards */
     --card-foreground: 0 0% 96%;
 
-    --neutral: 240 3.7% 15.9%;
-    --neutral-foreground: 0 0% 98%;
-    --success: 142.1 76.2% 36.3%;
-    --success-foreground: 0 0% 98%;
-    --warning: 47.9 95.8% 53.1%;
-    --warning-foreground: 47.9 95.8% 13.1%;
-    --info: 217.2 91.2% 59.8%;
-    --info-foreground: 0 0% 98%;
-
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 96%;
 
@@ -73,15 +64,6 @@
 
     --card: 0 0% 100%;
     --card-foreground: 15 25% 10%;
-
-    --neutral: 0 0% 95.1%;
-    --neutral-foreground: 0 0% 9%;
-    --success: 142.1 76.2% 36.3%;
-    --success-foreground: 0 0% 98%;
-    --warning: 47.9 95.8% 53.1%;
-    --warning-foreground: 47.9 95.8% 13.1%;
-    --info: 217.2 91.2% 59.8%;
-    --info-foreground: 0 0% 98%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 15 25% 10%;
