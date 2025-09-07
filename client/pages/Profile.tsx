@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { createClient } from "../lib/supabase";
 import { supabase } from "@/lib/supabase";
  
 interface ProfileData {
@@ -9,11 +8,6 @@ interface ProfileData {
 }
 
 export default function ProfilePage() {
-  const supabase = createClient(
-    import.meta.env.VITE_SUPABASE_URL,
-    import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY
-  );
-
   const [profiles, setProfiles] = useState<ProfileData[]>([]);
   const [loading, setLoading] = useState(true);
 
