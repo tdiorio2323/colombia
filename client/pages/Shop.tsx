@@ -121,7 +121,7 @@ export default function Shop() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar className="sticky glass-nav py-4">
-        <Button className="btn-gold relative">
+        <Button className="btn-gold relative" onClick={() => console.log('Cart clicked')}>
           <ShoppingCart className="h-5 w-5 mr-2" />
           Cart
           {cart.length > 0 && (
@@ -308,7 +308,7 @@ export default function Shop() {
                     ${cart.reduce((sum, item) => sum + item.price, 0).toFixed(2)} total
                   </div>
                 </div>
-                <Button className="btn-gold">
+                <Button className="btn-gold" onClick={() => console.log('Checkout clicked')}>
                   Checkout
                 </Button>
               </div>
