@@ -13,6 +13,7 @@ import Community from "./pages/Community";
 import Calendar from "./pages/Calendar";
 import NotFound from "./pages/NotFound";
 import SmartReply from "./pages/SmartReply";
+import Leaderboard from "./pages/Leaderboard";
 
 const queryClient = new QueryClient();
 
@@ -29,7 +30,8 @@ const App = () => (
           <Route path="/community" element={<Community />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/smart-reply" element={<SmartReply />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL \"*\" ROUTE */}
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
