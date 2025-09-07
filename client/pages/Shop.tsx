@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useState, ComponentProps } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, Star, Filter, Search, Heart } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
+
+/*
+  I've moved the Navbar component to its own file at `client/components/layout/Navbar.tsx`.
+  The original code had it defined inside the `Shop` component, which was causing the import error.
+  The import statement for it is already present.
+*/
 
 export default function Shop() {
   const [cart, setCart] = useState<any[]>([]);
