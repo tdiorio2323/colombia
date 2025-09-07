@@ -1,4 +1,3 @@
-import { useState, ComponentProps } from 'react';
 import { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,11 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, Star, Filter, Search, Heart } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 
-/*
-  I've moved the Navbar component to its own file at `client/components/layout/Navbar.tsx`.
-  The original code had it defined inside the `Shop` component, which was causing the import error.
-  The import statement for it is already present.
-*/
 // Define a type for our product for better type safety
 type Product = {
   id: number;
@@ -26,12 +20,10 @@ type Product = {
 };
 
 export default function Shop() {
-  const [cart, setCart] = useState<any[]>([]);
   const [cart, setCart] = useState<Product[]>([]);
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const products = [
   const products: Product[] = [
     {
       id: 1,
@@ -102,15 +94,6 @@ export default function Shop() {
     },
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Items', count: products.length },
-    { id: 'music', name: 'Music', count: products.filter(p => p.category === 'music').length },
-    { id: 'apparel', name: 'Apparel', count: products.filter(p => p.category === 'apparel').length },
-    { id: 'jewelry', name: 'Jewelry', count: products.filter(p => p.category === 'jewelry').length },
-    { id: 'experiences', name: 'Experiences', count: products.filter(p => p.category === 'experiences').length },
-    { id: 'digital', name: 'Digital', count: products.filter(p => p.category === 'digital').length },
-    { id: 'collectibles', name: 'Collectibles', count: products.filter(p => p.category === 'collectibles').length },
-  ];
   // useMemo will prevent recalculating categories on every render
   const categories = useMemo(() => {
     const categoryCounts = products.reduce((acc, product) => {
@@ -118,7 +101,6 @@ export default function Shop() {
       return acc;
     }, {} as Record<string, number>);
 
-  const filteredProducts = filter === 'all' ? products : products.filter(p => p.category === filter);
     const allCategories = [
       { id: 'all', name: 'All Items', count: products.length },
       ...Object.keys(categoryCounts).map(cat => ({ id: cat, name: cat.charAt(0).toUpperCase() + cat.slice(1), count: categoryCounts[cat] }))
@@ -126,7 +108,6 @@ export default function Shop() {
     return allCategories;
   }, [products]);
 
-  const addToCart = (product: any) => {
   const filteredProducts = useMemo(() => {
     return products
       .filter(p => filter === 'all' || p.category === filter)
