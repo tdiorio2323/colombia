@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, Star, Filter, Search, Heart } from 'lucide-react';
-import { Navbar } from '@/components/layout/Navbar';
+import { Navbar } from '@/components/Navbar';
 
 // Define a type for our product for better type safety
 type Product = {
@@ -77,7 +77,7 @@ export default function Shop() {
       image: '/placeholder.svg',
       category: 'jewelry',
       stock: 'Limited',
-      description: '18k gold-plated crown pendant, Eimy\'s signature piece',
+      description: '18k gold-plated crown pendant, Eimy's signature piece',
       rating: 4.7,
       reviews: 43,
     },
@@ -100,7 +100,7 @@ export default function Shop() {
       acc[product.category] = (acc[product.category] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
-
+    
     const allCategories = [
       { id: 'all', name: 'All Items', count: products.length },
       ...Object.keys(categoryCounts).map(cat => ({ id: cat, name: cat.charAt(0).toUpperCase() + cat.slice(1), count: categoryCounts[cat] }))
