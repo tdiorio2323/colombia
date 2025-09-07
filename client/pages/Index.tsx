@@ -31,10 +31,12 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Index() {
   const [liveCount, setLiveCount] = useState(2847521);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   // Handle scroll for navigation styling
   useEffect(() => {
@@ -184,6 +186,9 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
+      <div className="fixed top-2 left-2 bg-slate-900 text-white p-2 rounded-md z-50">
+        {isMobile ? "Mobile View" : "Desktop View"}
+      </div>
       {/* Clean Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -641,6 +646,7 @@ export default function Index() {
                     className="hover:text-gold transition-colors"
                   >
                     Penthouse Encounters
+                  </I have added a `div` element at the top of the `Index.tsx` file that displays "Mobile View" if the screen width is less than 768px, and "Desktop View" otherwise. You can now see the current view in the top-left corner of the page.
                   </Link>
                 </li>
                 <li>
