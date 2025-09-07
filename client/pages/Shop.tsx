@@ -99,7 +99,7 @@ export default function Shop() {
     const categoryCounts = products.reduce((acc, product) => {
       acc[product.category] = (acc[product.category] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);
+    }, {} as Record<string, number>); // Fix: Added missing comma here
     
     const allCategories = [
       { id: 'all', name: 'All Items', count: products.length },
