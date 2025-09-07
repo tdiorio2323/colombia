@@ -1,4 +1,5 @@
 import { useState, ComponentProps } from 'react';
+import { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -10,12 +11,28 @@ import { Navbar } from '@/components/layout/Navbar';
   The original code had it defined inside the `Shop` component, which was causing the import error.
   The import statement for it is already present.
 */
+// Define a type for our product for better type safety
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  image: string;
+  category: string;
+  stock: string;
+  description: string;
+  rating: number;
+  reviews: number;
+};
 
 export default function Shop() {
   const [cart, setCart] = useState<any[]>([]);
+  const [cart, setCart] = useState<Product[]>([]);
   const [filter, setFilter] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const products = [
+  const products: Product[] = [
     {
       id: 1,
       name: 'Signed Debut Album',
@@ -94,10 +111,29 @@ export default function Shop() {
     { id: 'digital', name: 'Digital', count: products.filter(p => p.category === 'digital').length },
     { id: 'collectibles', name: 'Collectibles', count: products.filter(p => p.category === 'collectibles').length },
   ];
+  // useMemo will prevent recalculating categories on every render
+  const categories = useMemo(() => {
+    const categoryCounts = products.reduce((acc, product) => {
+      acc[product.category] = (acc[product.category] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
 
   const filteredProducts = filter === 'all' ? products : products.filter(p => p.category === filter);
+    const allCategories = [
+      { id: 'all', name: 'All Items', count: products.length },
+      ...Object.keys(categoryCounts).map(cat => ({ id: cat, name: cat.charAt(0).toUpperCase() + cat.slice(1), count: categoryCounts[cat] }))
+    ];
+    return allCategories;
+  }, [products]);
 
   const addToCart = (product: any) => {
+  const filteredProducts = useMemo(() => {
+    return products
+      .filter(p => filter === 'all' || p.category === filter)
+      .filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  }, [products, filter, searchTerm]);
+
+  const addToCart = (product: Product) => {
     setCart(prev => [...prev, product]);
   };
 
@@ -142,6 +178,8 @@ export default function Shop() {
                       <input 
                         type="text"
                         placeholder="Search products..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
                         className="w-full pl-10 pr-4 py-2 border border-input rounded-md focus:ring-2 focus:ring-gold focus:border-transparent"
                       />
                     </div>
