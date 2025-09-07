@@ -65,22 +65,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "neutral": {
-          DEFAULT: "hsl(var(--neutral))",
-          foreground: "hsl(var(--neutral-foreground))",
-        },
-        "success": {
-          DEFAULT: "hsl(var(--success))",
-          foreground: "hsl(var(--success-foreground))",
-        },
-        "warning": {
-          DEFAULT: "hsl(var(--warning))",
-          foreground: "hsl(var(--warning-foreground))",
-        },
-        "info": {
-          DEFAULT: "hsl(var(--info))",
-          foreground: "hsl(var(--info-foreground))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -106,14 +90,6 @@ export default {
         glass: "0 8px 32px rgba(0, 0, 0, 0.37)",
         "glass-inset": "inset 0 1px 0 rgba(255, 255, 255, 0.1)",
         "3xl": "0 35px 60px -12px rgba(0, 0, 0, 0.25)",
-        "neumorphic-light":
-          "9px 9px 16px rgb(163,177,198,.6), -9px -9px 16px rgba(255,255,255, 0.5)",
-        "neumorphic-dark":
-          "9px 9px 16px rgba(0,0,0,.6), -9px -9px 16px rgba(255,255,255, 0.1)",
-        "neumorphic-inset-light":
-          "inset 5px 5px 10px rgb(163,177,198,.6), inset -5px -5px 10px rgba(255,255,255, 0.5)",
-        "neumorphic-inset-dark":
-          "inset 5px 5px 10px rgba(0,0,0,.6), inset -5px -5px 10px rgba(255,255,255, 0.1)",
       },
       backdropBlur: {
         glass: "20px",
