@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import ProfilePage from "./Profile";
-import { supabase } from "@/lib/supabase";
+import { createClient } from "@/lib/supabase";
 
 const mockProfiles = [
   { id: "1", username: "testuser1" },
@@ -9,14 +9,13 @@ const mockProfiles = [
 ];
 
 // Mock the Supabase client using vi.mock
-vi.mock('@/lib/supabase', () => ({
-  supabase: {
-    from: vi.fn(),
-  },
-}));
+vi.mock('@/lib/supabase', () => {
+  const mockSupabaseClient = { from: vi.fn() };
+  return { createClient: vi.fn(() => mockSupabaseClient) };
+});
 
 // Use vi.mocked to get a typed mock object
-const mockedSupabase = vi.mocked(supabase, true);
+const mockedCreateClient = vi.mocked(createClient, true);
 
 describe("ProfilePage", () => {
   beforeEach(() => {
@@ -25,8 +24,8 @@ describe("ProfilePage", () => {
   });
 
   it("displays loading state initially", () => {
-    // Mock a pending promise to keep it in a loading state
-    mockedSupabase.from.mockReturnValue({
+    // Mock a pending promise to keep it in a loading state for the client created by createClient
+    mockedCreateClient().from.mockReturnValue({
       select: vi.fn().mockReturnValue(new Promise(() => {})),
     } as any);
 
@@ -35,7 +34,7 @@ describe("ProfilePage", () => {
   });
 
   it("fetches and displays profiles successfully", async () => {
-    mockedSupabase.from.mockReturnValue({
+    mockedCreateClient().from.mockReturnValue({
       select: vi.fn().mockResolvedValue({ data: mockProfiles, error: null }),
     } as any);
 
@@ -53,7 +52,7 @@ describe("ProfilePage", () => {
     const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
     const fetchError = new Error("Failed to fetch");
 
-    mockedSupabase.from.mockReturnValue({
+    mockedCreateClient().from.mockReturnValue({
       select: vi.fn().mockResolvedValue({ data: null, error: fetchError }),
     } as any);
 
@@ -70,7 +69,7 @@ describe("ProfilePage", () => {
   });
 
   it('displays nothing if data is empty', async () => {
-    mockedSupabase.from.mockReturnValue({
+    mockedCreateClient().from.mockReturnValue({
       select: vi.fn().mockResolvedValue({ data: [], error: null }),
     } as any);
 
