@@ -10,3 +10,11 @@
 export interface DemoResponse {
   message: string;
 }
+
+export interface SmartReplyRequest {
+  prompt: string;
+}
+
+export interface SmartReplyResponse {
+  reply: string;
+}
