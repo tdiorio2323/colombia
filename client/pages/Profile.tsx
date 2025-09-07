@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createClient } from "../lib/supabase";
+import { supabase } from "@/lib/supabase";
  
 interface ProfileData {
   id: string;

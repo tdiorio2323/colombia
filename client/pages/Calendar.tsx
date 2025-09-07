@@ -126,12 +126,6 @@ export default function Calendar() {
               >
                 Book Me
               </Link>
-              <Link
-                to="/profile"
-                className="hover:text-primary transition-colors font-medium"
-              >
-                Profile
-              </Link>
             </div>
             <Button className="btn-sexy font-semibold">
               <Flame className="mr-2 h-4 w-4" />
