@@ -646,7 +646,6 @@ export default function Index() {
                     className="hover:text-gold transition-colors"
                   >
                     Penthouse Encounters
-                  </I have added a `div` element at the top of the `Index.tsx` file that displays "Mobile View" if the screen width is less than 768px, and "Desktop View" otherwise. You can now see the current view in the top-left corner of the page.
                   </Link>
                 </li>
                 <li>
