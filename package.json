@@ -16,12 +16,19 @@
     "build:client": "vite build",
     "build:server": "vite build --config vite.config.server.ts",
     "start": "node dist/server/node-build.mjs",
-    "test": "vitest --run",
+    "test": "vitest",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "audit:routes": "node scripts/crawl.js",
+    "audit:links": "linkinator --recurse --skip 'mailto:' $BASE_URL",
+    "audit:lighthouse": "lhci autorun",
+    "audit:a11y": "pa11y-ci",
+    "audit:zap": "bash scripts/zap-baseline.sh",
+    "audit:all": "npm run audit:routes && npm run audit:links && npm run audit:a11y && npm run audit:lighthouse"
   },
   "dependencies": {
     "axios": "^1.11.0",
+    "cheerio": "^1.0.0-rc.12",
     "dotenv": "^17.2.2",
     "express": "^4.18.2",
     "zod": "^3.23.8"
@@ -77,6 +84,9 @@
     "framer-motion": "^12.6.2",
     "globals": "^15.9.0",
     "input-otp": "^1.2.4",
+    "lighthouse": "^11.7.0",
+    "linkinator": "^4.0.2",
+    "pa11y-ci": "^3.1.0",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
     "postcss": "^8.5.6",
