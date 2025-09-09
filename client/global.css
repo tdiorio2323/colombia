@@ -33,6 +33,9 @@
     --accent: 271 76% 53%; /* Purple accent */
     --accent-foreground: 0 0% 98%;
 
+    --gold: 45 100% 50%; /* #FFD700 */
+    --gold-foreground: 45 100% 10%;
+
     --pink: 300 76% 70%; /* Pink */
     --pink-foreground: 0 0% 10%;
 
@@ -79,6 +82,9 @@
 
     --accent: 271 76% 53%;
     --accent-foreground: 0 0% 98%;
+
+    --gold: 45 100% 50%; /* #FFD700 */
+    --gold-foreground: 45 100% 10%;
 
     --pink: 300 76% 70%;
     --pink-foreground: 0 0% 10%;

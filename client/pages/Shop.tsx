@@ -77,7 +77,7 @@ export default function Shop() {
       image: '/placeholder.svg',
       category: 'jewelry',
       stock: 'Limited',
-      description: '18k gold-plated crown pendant, Eimy's signature piece',
+      description: '18k gold-plated crown pendant, Eimy\'s signature piece',
       rating: 4.7,
       reviews: 43,
     },
