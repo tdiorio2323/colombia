@@ -27,6 +27,7 @@
     "audit:all": "npm run audit:routes && npm run audit:links && npm run audit:a11y && npm run audit:lighthouse"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.57.2",
     "axios": "^1.11.0",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^17.2.2",
