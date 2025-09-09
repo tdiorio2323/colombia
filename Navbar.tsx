@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
+import React from "react";
 
 interface NavbarProps {
   className?: string;
@@ -51,4 +52,25 @@ export function Navbar({ className }: NavbarProps) {
               <h1 className="text-2xl font-luxury-display font-bold text-gold">
                 Eimy Contreras
               </h1>
-              <p className="text-sm text-gold/80 font
+              <p className="text-sm text-gold/80 font-luxury-script">
+                Colombian Goddess
+              </p>
+            </div>
+          </Link>
+          <div className="flex items-center space-x-6">
+            <Link to="/shop" className="text-gold/80 hover:text-gold transition-colors flex items-center">
+              <ShoppingCart className="h-5 w-5 mr-2" />
+              Shop
+            </Link>
+            <Link to="/calendar" className="text-gold/80 hover:text-gold transition-colors flex items-center">
+              <Calendar className="h-5 w-5 mr-2" />
+              Book
+            </Link>
+            {/* You can add more navigation items here */}
+            {/* Example: <Button variant="ghost" className="text-gold">Sign In</Button> */}
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
