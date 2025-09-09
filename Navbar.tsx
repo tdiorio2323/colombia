@@ -74,3 +74,5 @@ export function Navbar({ className }: NavbarProps) {
     </nav>
   );
 }
+
+export default Navbar
