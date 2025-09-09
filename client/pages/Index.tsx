@@ -31,21 +31,12 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Navbar } from "@/components/Navbar";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function Index() {
   const [liveCount, setLiveCount] = useState(2847521);
-  const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
-
-  // Handle scroll for navigation styling
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Simulate live follower updates
   useEffect(() => {
@@ -189,57 +180,7 @@ export default function Index() {
       <div className="fixed top-2 left-2 bg-slate-900 text-white p-2 rounded-md z-50">
         {isMobile ? "Mobile View" : "Desktop View"}
       </div>
-      {/* Clean Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "glass-nav py-4" : "bg-transparent py-6"
-        }`}
-      >
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-gold via-primary to-blue rounded-xl flex items-center justify-center">
-                <Crown className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-2xl font-luxury-display font-bold text-gold">
-                  Eimy Contreras
-                </h1>
-                <p className="text-sm text-gold/80 font-luxury-script">
-                  Colombian Luxury
-                </p>
-              </div>
-            </div>
-
-            <div className="hidden md:flex items-center space-x-8">
-              <Link
-                to="/services"
-                className="text-white/90 hover:text-gold transition-colors"
-              >
-                Experiences
-              </Link>
-              <Link
-                to="/shop"
-                className="text-white/90 hover:text-gold transition-colors"
-              >
-                Shop
-              </Link>
-              <Link
-                to="/community"
-                className="text-white/90 hover:text-gold transition-colors"
-              >
-                Community
-              </Link>
-              <Link
-                to="/calendar"
-                className="text-white/90 hover:text-gold transition-colors"
-              >
-                Book
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Clean Hero Section */}
       <section className="relative pt-24 pb-16 overflow-hidden">
