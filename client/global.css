@@ -312,6 +312,85 @@
   .animate-shimmer {
     animation: shimmer 3s ease infinite;
   }
+
+  /* Enhanced Auth Card Styles */
+  .auth-card-overlay {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+  }
+
+  .auth-card-luxury {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 215, 0, 0.15) 0%,
+      rgba(206, 17, 38, 0.08) 30%,
+      rgba(0, 56, 147, 0.15) 70%,
+      rgba(255, 215, 0, 0.1) 100%
+    );
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.5),
+      0 10px 30px rgba(255, 215, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+  }
+
+  .auth-input-luxury {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow:
+      0 4px 15px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .auth-input-luxury:focus {
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.3),
+      0 0 0 3px rgba(255, 215, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Floating animation for auth elements */
+  @keyframes auth-float {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    33% {
+      transform: translateY(-2px) scale(1.01);
+    }
+    66% {
+      transform: translateY(1px) scale(0.99);
+    }
+  }
+
+  .animate-auth-float {
+    animation: auth-float 4s ease-in-out infinite;
+  }
+
+  /* Premium glow effect for success state */
+  .success-glow {
+    box-shadow:
+      0 0 30px rgba(34, 197, 94, 0.3),
+      0 0 60px rgba(255, 215, 0, 0.2),
+      0 0 90px rgba(34, 197, 94, 0.1);
+  }
+
+  /* Mobile responsiveness for auth card */
+  @media (max-width: 640px) {
+    .auth-card-luxury {
+      margin: 1rem;
+      border-radius: 1.5rem;
+    }
+  }
 }
 
 /* Custom Scrollbar */
@@ -336,4 +415,22 @@
 ::selection {
   background: rgba(255, 215, 0, 0.3);
   color: #ffd700;
+}
+
+/* Auth card specific scrollbar */
+.auth-card-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.auth-card-content::-webkit-scrollbar-track {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.auth-card-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.3);
+  border-radius: 2px;
+}
+
+.auth-card-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.5);
 }
