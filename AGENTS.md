@@ -1,5 +1,42 @@
 # Fusion Starter
+# Repository Guidelines
 
+This guide explains how to work effectively in this Fusion Starter repo (React + Express + Vite + Tailwind + Vitest).
+
+## Project Structure & Module Organization
+- Client SPA: `client/` (pages in `client/pages/`, UI in `client/components/`, utilities in `client/lib/`).
+- Server API: `server/` (Express setup in `server/index.ts`, handlers in `server/routes/`). All endpoints under `/api/*`.
+- Shared types: `shared/` (e.g., `shared/api.ts`) imported via `@shared/*`. Client alias `@/*` maps to `client/*`.
+- Assets: `public/`. Build output: `dist/`.
+
+## Build, Test, and Development Commands
+- `npm run dev` — Start Vite + Express on one port with hot reload.
+- `npm run build` — Build client and server bundles.
+- `npm start` — Run the production server from `dist/`.
+- `npm test` — Run Vitest unit tests.
+- `npm run typecheck` — TypeScript checks.
+- `npm run format.fix` — Format code with Prettier.
+
+## Coding Style & Naming Conventions
+- TypeScript everywhere; 2‑space indentation (see `.prettierrc`).
+- React components/pages: PascalCase filenames (e.g., `Index.tsx`, `CreatorPage.tsx`).
+- Non-React modules: kebab-case or lowerCamelCase filenames (e.g., `use-toast.ts`, `smart-reply.ts`).
+- Prefer `@/` and `@shared/` path aliases. Use the `cn()` utility for conditional class names.
+- Server endpoints: only add when logic must reside on the server (e.g., API keys, DB). Keep handlers small and typed via `@shared/api`.
+
+## Testing Guidelines
+- Framework: Vitest. Place tests near sources using `*.test.ts(x)` or `*.spec.ts(x)` (e.g., `client/pages/Calendar.test.tsx`).
+- Test React components with React Testing Library patterns; mock network where applicable.
+- Aim to cover key route logic, shared utilities, and server handlers.
+
+## Commit & Pull Request Guidelines
+- Commit messages: imperative, concise; prefer Conventional Commits when possible (e.g., `feat: add leaderboard route`).
+- Pull Requests: include summary, linked issues, screenshots for UI, steps to test, and note any API or schema changes.
+- Keep PRs focused and small; update docs and shared types when interfaces change.
+
+## Security & Configuration Tips
+- Configure secrets via environment variables (e.g., `GEMINI_API_KEY`); never commit secrets.
+- Validate inputs with Zod and keep API responses typed via shared interfaces.
 A production-ready full-stack React application template with integrated Express server, featuring React Router 6 SPA mode, TypeScript, Vitest, Zod and modern tooling.
 
 While the starter comes with a express server, only create endpoint when strictly neccesary, for example to encapsulate logic that must leave in the server, such as private keys handling, or certain DB operations, db...

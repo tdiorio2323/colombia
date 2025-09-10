@@ -4,6 +4,31 @@ import Calendar from './Calendar';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('Calendar Component', () => {
+  const getDateCard = (day: string, opts: { disabled?: boolean } = {}) => {
+    const matches = screen.getAllByText(day);
+    for (const el of matches) {
+      const card = el.closest('.cursor-pointer');
+      if (!card) continue;
+      const isDisabled = card.classList.contains('cursor-not-allowed') || card.classList.contains('opacity-50');
+      if ((opts.disabled && isDisabled) || (!opts.disabled && !isDisabled)) {
+        return card as HTMLElement;
+      }
+    }
+    throw new Error(`Date card for ${day} not found`);
+  };
+
+  const getTimeCard = (time: string, opts: { disabled?: boolean } = {}) => {
+    const matches = screen.getAllByText(time);
+    for (const el of matches) {
+      const card = el.closest('.cursor-pointer');
+      if (!card) continue;
+      const isDisabled = card.classList.contains('cursor-not-allowed') || card.classList.contains('opacity-50');
+      if ((opts.disabled && isDisabled) || (!opts.disabled && !isDisabled)) {
+        return card as HTMLElement;
+      }
+    }
+    throw new Error(`Time card for ${time} not found`);
+  };
   it('renders without crashing', () => {
     render(
       <BrowserRouter>
@@ -41,7 +66,7 @@ describe('Calendar Component', () => {
         <Calendar />
       </BrowserRouter>
     );
-    const availableDateCard = screen.getByText('15').closest('div'); // Find the date card with text '15'
+    const availableDateCard = getDateCard('15'); // available date card
     fireEvent.click(availableDateCard);
     // Check if the card now has the 'ring-2 ring-primary bg-primary/10' class.
     expect(availableDateCard).toHaveClass('ring-2 ring-primary bg-primary/10');
@@ -53,7 +78,8 @@ describe('Calendar Component', () => {
         <Calendar />
       </BrowserRouter>
     );
-    const disabledDateCard = screen.getByText('17').closest('div'); // Find the date card with text '17' (disabled)
+    const dateContainer = screen.getByText('Choose Date').closest('div')?.parentElement;
+    const disabledDateCard = dateContainer?.querySelector('.cursor-not-allowed') as HTMLElement;
     const initialClassList = Array.from(disabledDateCard.classList);
     fireEvent.click(disabledDateCard);
     // Check that the class list hasn't changed.
@@ -68,10 +94,10 @@ describe('Calendar Component', () => {
       </BrowserRouter>
     );
     // First select a date to make the time slots visible
-    const availableDateCard = screen.getByText('15').closest('div');
+    const availableDateCard = getDateCard('15');
     fireEvent.click(availableDateCard);
 
-    const availableTimeCard = screen.getByText('10:00 AM').closest('div'); // Find the time card with text '10:00 AM'
+    const availableTimeCard = getTimeCard('10:00 AM');
     fireEvent.click(availableTimeCard);
     // Check if the card now has the 'ring-2 ring-primary bg-primary/10' class.
     expect(availableTimeCard).toHaveClass('ring-2 ring-primary bg-primary/10');
@@ -84,10 +110,10 @@ describe('Calendar Component', () => {
       </BrowserRouter>
     );
         // First select a date to make the time slots visible
-    const availableDateCard = screen.getByText('15').closest('div');
+    const availableDateCard = getDateCard('15');
     fireEvent.click(availableDateCard);
-
-    const disabledTimeCard = screen.getByText('6:00 PM').closest('div'); // Find the time card with text '6:00 PM' (disabled)
+    const timeContainer = screen.getByText('Select Time').closest('div')?.parentElement;
+    const disabledTimeCard = timeContainer?.querySelector('.cursor-not-allowed') as HTMLElement;
     const initialClassList = Array.from(disabledTimeCard.classList);
     fireEvent.click(disabledTimeCard);
     // Check that the class list hasn't changed.
@@ -116,7 +142,7 @@ describe('Calendar Component', () => {
         fireEvent.click(serviceCard);
     expect(bookButton).toBeDisabled();
 
-    const availableDateCard = screen.getByText('15').closest('div');
+    const availableDateCard = getDateCard('15');
         fireEvent.click(availableDateCard);
         expect(bookButton).toBeDisabled();
   });
@@ -131,7 +157,7 @@ describe('Calendar Component', () => {
         const serviceCard = screen.getByText('Private Video Call').closest('.sexy-card');
         fireEvent.click(serviceCard);
 
-        const availableDateCard = screen.getByText('15').closest('div');
+        const availableDateCard = getDateCard('15');
         fireEvent.click(availableDateCard);
 
         const availableTimeCard = screen.getByText('10:00 AM').closest('div');

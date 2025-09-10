@@ -1,5 +1,13 @@
+import { vi, describe, it, expect, beforeEach } from 'vitest';
+
+// Mock Supabase BEFORE importing modules that use it
+vi.mock('@/lib/supabase', () => ({
+  supabase: {
+    from: vi.fn(),
+  },
+}));
+
 import { render, screen, waitFor } from '@testing-library/react';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
 import ProfilePage from "./Profile";
 import { supabase } from "@/lib/supabase";
 
@@ -7,13 +15,6 @@ const mockProfiles = [
   { id: "1", username: "testuser1" },
   { id: "2", username: "testuser2" },
 ];
-
-// Mock the Supabase client using vi.mock
-vi.mock('@/lib/supabase', () => ({
-  supabase: {
-    from: vi.fn(),
-  },
-}));
 
 // Use vi.mocked to get a typed mock object
 const mockedSupabase = vi.mocked(supabase, true);
