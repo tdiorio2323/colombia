@@ -19,12 +19,18 @@
     "test": "vitest",
     "format.fix": "prettier --write .",
     "typecheck": "tsc",
+    "prepare": "husky install",
     "audit:routes": "node scripts/crawl.js",
     "audit:links": "linkinator --recurse --skip 'mailto:' $BASE_URL",
     "audit:lighthouse": "lhci autorun",
     "audit:a11y": "pa11y-ci",
     "audit:zap": "bash scripts/zap-baseline.sh",
     "audit:all": "npm run audit:routes && npm run audit:links && npm run audit:a11y && npm run audit:lighthouse"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,css,md,json}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.2",
@@ -35,6 +41,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",
