@@ -1,4 +1,4 @@
-# Fusion Starter
+**# Fusion Starter
 
 A production-ready full-stack React + Express starter powered by Vite, TailwindCSS, Vitest, and shared TypeScript types.
 
@@ -19,3 +19,4 @@ Key paths:
 - Shared types: `shared/`
 
 See `package.json` for the full script list.
+**
